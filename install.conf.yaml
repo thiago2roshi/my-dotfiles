@@ -1,5 +1,9 @@
-- clean: ['~']
-
+- clean: ['~', '~/.config']
+- shell:
+    -   
+        - "mkdir -p ~/.config"
+        - "Criando pasta ~/.config"
+    - 
 - link:
     ~/.profile: profile
     ~/.bashrc: bashrc
@@ -8,5 +12,9 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.Xresources: Xresources
-
-
+~/.atom:
+    create: true
+    path: atom/
+~/bash_script:
+    create: true
+    path: scripts/

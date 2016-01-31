@@ -1,0 +1,17 @@
+#!/bin/bash
+
+Principal()
+{
+    echo '====================================='
+    echo '| Download apenas o audio (musicas) |'
+    echo '====================================='
+    echo
+    echo -n "entre com a url do youtube: "
+    read ytUrl
+    if [[ $ytUrl != "" ]]; then
+        youtube-dl --ignore-errors --extract-audio --audio-quality 3 --audio-format vorbis \
+                   --output "%(title)s - %(uploader)s [%(format)s].%(ext)s" \
+                   $ytUrl
+    fi
+}
+Principal
