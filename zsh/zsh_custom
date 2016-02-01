@@ -9,7 +9,8 @@
  export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
 
  DEFAULT_USER="thiago"
- eval `dircolors ~/.solarized/dircolors.ansi-dark`
+# Validando necessidade
+# eval `dircolors ~/.solarized/dircolors.ansi-dark
 
 # O que deixei para fazer?
  task
