@@ -78,24 +78,6 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
- export editor="vim"
- export HISTSIZE=1000;
- export HISTFILESIZE=$HISTSIZE;
- export HISTCONTROL=ignoredups;
- export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
-
-##
-# ThiagoRoshi POG
-##
- DEFAULT_USER="thiago"
- eval `dircolors ~/.solarized/dircolors.ansi-dark`
-##
-# O que deixei para fazer?
- task
-# bora ver o que roda embaixo do capô?
-# screenfetch
+ source $HOME/.zsh_aliases
+ source $HOME/.zsh_custom
