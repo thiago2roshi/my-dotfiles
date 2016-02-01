@@ -1,9 +1,4 @@
-- clean: ['~', '~/.config']
-- shell:
-    -   
-        - "mkdir -p ~/.config"
-        - "Criando pasta ~/.config"
-    - 
+- clean: ['~','~/.config']
 - link:
     ~/.profile: profile
     ~/.bashrc: bashrc
@@ -12,9 +7,9 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.Xresources: Xresources
-~/.atom:
-    create: true
-    path: atom/
-~/bash_script:
-    create: true
-    path: scripts/
+    ~/bash_script:
+        create: true
+        path: scripts/
+    ~/.taskrc: taskrc
+- sheel:
+    - [git submodule update, "atualizando submodulos]
