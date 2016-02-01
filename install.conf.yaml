@@ -11,6 +11,8 @@
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
+    ~/.zsh_aliases: zsh/zsh_aliases
+    ~/.zsh_custom: zsh/zsh_custom
     ~/.Xresources: Xresources
 ~/.atom:
     create: true
