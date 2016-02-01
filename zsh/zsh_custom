@@ -1,0 +1,17 @@
+##
+# Personal Customizations
+# @thiagoroshi
+##
+ export EDITOR="vim"
+ export HISTSIZE=1000;
+ export HISTFILESIZE=$HISTSIZE;
+ export HISTCONTROL=ignoredups;
+ export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
+ DEFAULT_USER="thiago"
+ eval `dircolors ~/.solarized/dircolors.ansi-dark`
+
+# O que deixei para fazer?
+ task
+# bora ver o que roda embaixo do capô?
+# screenfetch
