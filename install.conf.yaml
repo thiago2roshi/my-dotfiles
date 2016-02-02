@@ -5,6 +5,9 @@
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
     ~/.vimrc: vimrc
+    ~/.vim/bundle/Vundle.vim:
+            create: true
+            path: Vundle.vim
     ~/.zshrc: zshrc
     ~/.zsh_aliases: zsh/zsh_aliases
     ~/.zsh_custom: zsh/zsh_custom
@@ -12,6 +15,6 @@
     ~/bash_script:
         create: true
         path: scripts/
-    ~/.taskrc: taskrc
 - sheel:
-    - [git submodule update, "atualizando submodulos]
+    - [git submodule update, atualizando submodulos]
+
