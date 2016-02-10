@@ -78,5 +78,5 @@ plugins=(autocomplete git git-extras pass sudo taskwarrior zsh-syntax-highlighti
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
- source $HOME/.zsh_aliases
- source $HOME/.zsh_custom
+ source $HOME/.dotfiles/zsh/zsh_aliases
+ source $HOME/.dotfiles/zsh/zsh_custom

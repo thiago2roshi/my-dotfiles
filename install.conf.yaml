@@ -8,9 +8,11 @@
     ~/.vim/bundle/Vundle.vim:
             create: true
             path: Vundle.vim
+    ~/.config/mpd:
+            create: true
+            path: config/mpd
+    ~/.config/redshift.conf: config/redshift.conf
     ~/.zshrc: zshrc
-    ~/.zsh_aliases: zsh/zsh_aliases
-    ~/.zsh_custom: zsh/zsh_custom
     ~/.Xresources: Xresources
     ~/bash_script:
         create: true
