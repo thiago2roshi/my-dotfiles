@@ -1,0 +1,12 @@
+default_linemode 
+delete 
+w3m
+image
+set colorscheme solarized
+set open_all_images True
+set colorscheme default
+set preview_images false
+set preview_script ~/.config/ranger/scope.sh
+set use_preview_script true
+set preview_images true
+
