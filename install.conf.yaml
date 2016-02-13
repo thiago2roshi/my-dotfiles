@@ -17,6 +17,6 @@
     ~/bash_script:
         create: true
         path: scripts/
-- sheel:
+- shell:
     - [git submodule update, atualizando submodulos]
-
+    - [bash scripts/install_step.sh, concluindo instalação]
