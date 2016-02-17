@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# how long should the popup remain?
+duration=3
+
+# define geometry
+barx=20
+bary=80
+barw=120
+barh=20
+
+# colors
+bar_bg='#ff4a4a4a'
+bar_fg='#ffffffff' # white is default
+
+## font used
+#bar_font='-*-gohufont-medium-*-*--11-*-*-*-*-*-iso10646-1'
+
+# compute all this
+##baropt='-g ${barw}x${barh}+${barx}+${bary} -B${bar_bg} -f ${bar_font}'
+#baropt='-g ${barw}x${barh}+${bary}+${barx} -B ${bar_bg} -p':
+
+# Create the popup and make it live for 3 seconds
+(echo " $@"; sleep ${duration}) | bar -g ${barw}x${barh}+${barx}+${bary} -B ${bar_bg}
