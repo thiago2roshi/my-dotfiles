@@ -1,0 +1,112 @@
+[global_config]
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  handle_size = 1
+  inactive_color_offset = 0.6
+  suppress_multiple_term_dialog = True
+  title_inactive_bg_color = "#37474f"
+  title_inactive_fg_color = "#eceff1"
+  title_transmit_bg_color = "#263238"
+  title_transmit_fg_color = "#eceff1"
+  title_use_system_font = False
+  window_state = hidden
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 8a53b443-a1f1-4ef9-b30d-6353ae6fad6b
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:27
+      size = 1366, 711
+      title = Mac Quayle-I Hate Society
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 680
+      ratio = 0.498169838946
+      type = HPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 355
+      ratio = 0.5
+      type = VPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 8a53b443-a1f1-4ef9-b30d-6353ae6fad6b
+    [[[terminal4]]]
+      command = ""
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = e5169cc5-eccc-430c-ac10-872c7aa42d43
+    [[[terminal5]]]
+      command = ncmpcpp
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 64a497e1-df39-4279-8fb2-24c29694fd3e
+  [[Nova disposição]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = 8a53b443-a1f1-4ef9-b30d-6353ae6fad6b
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 0:27
+      size = 1366, 711
+      title = Mac Quayle-I Hate Society
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 680
+      ratio = 0.498169838946
+      type = HPaned
+    [[[child3]]]
+      order = 1
+      parent = child1
+      position = 355
+      ratio = 0.5
+      type = VPaned
+    [[[terminal2]]]
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+      uuid = 8a53b443-a1f1-4ef9-b30d-6353ae6fad6b
+    [[[terminal4]]]
+      order = 0
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = e5169cc5-eccc-430c-ac10-872c7aa42d43
+    [[[terminal5]]]
+      order = 1
+      parent = child3
+      profile = default
+      type = Terminal
+      uuid = 64a497e1-df39-4279-8fb2-24c29694fd3e
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#263238"
+    background_darkness = 0.83
+    background_image = None
+    background_type = transparent
+    cursor_color = "#eceff1"
+    font = Terminess Powerline 10
+    foreground_color = "#eceff1"
+    palette = "#263238:#ff9800:#8bc34a:#ffc107:#03a9f4:#e91e63:#009688:#cfd8dc:#37474f:#ffa74d:#9ccc65:#ffa000:#81d4fa:#ad1457:#26a69a:#eceff1"
+    scrollbar_position = hidden
+    use_system_font = False

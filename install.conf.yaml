@@ -4,6 +4,9 @@
     ~/.bashrc: bashrc
     ~/.bash_logout: bash_logout
     ~/.gitconfig: gitconfig
+    ~/.config/nvim:
+            create: true
+            path: config/neovim
     ~/.vimrc: vimrc
     ~/.vim/bundle/Vundle.vim:
             create: true
@@ -11,12 +14,16 @@
     ~/.config/mpd:
             create: true
             path: config/mpd
+    ~/.config/terminator:
+            create: true
+            path: config/terminator
     ~/.config/redshift.conf: config/redshift.conf
     ~/.zshrc: zshrc
     ~/.Xresources: Xresources
     ~/bash_script:
         create: true
         path: scripts/
+    ~/.conkyrc: config/conkyrc
 - shell:
     - [git submodule update, atualizando submodulos]
     - [bash scripts/install_step.sh, concluindo instalação]

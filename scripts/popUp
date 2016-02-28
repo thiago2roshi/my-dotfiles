@@ -5,7 +5,7 @@ duration=3
 
 # define geometry
 barx=20
-bary=80
+bary=40
 barw=120
 barh=20
 
@@ -21,4 +21,4 @@ bar_fg='#ffffffff' # white is default
 #baropt='-g ${barw}x${barh}+${bary}+${barx} -B ${bar_bg} -p':
 
 # Create the popup and make it live for 3 seconds
-(echo " $@"; sleep ${duration}) | bar -g ${barw}x${barh}+${barx}+${bary} -B ${bar_bg}
+(echo " $@"; sleep ${duration}) | bar -g ${barw}x${barh}+${barx}+${bary} -B ${bar_bg}-F ${bar_fg}
