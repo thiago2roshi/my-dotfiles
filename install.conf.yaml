@@ -7,10 +7,6 @@
     ~/.config/nvim:
             create: true
             path: config/neovim
-    ~/.vimrc: vimrc
-    ~/.vim/bundle/Vundle.vim:
-            create: true
-            path: Vundle.vim
     ~/.config/mpd:
             create: true
             path: config/mpd
@@ -23,7 +19,9 @@
     ~/bash_script:
         create: true
         path: scripts/
-    ~/.conkyrc: config/conkyrc
+    ~/.config/conky: 
+        create: true
+        path: config/conky/
 - shell:
     - [git submodule update, atualizando submodulos]
     - [bash scripts/install_step.sh, concluindo instalação]
