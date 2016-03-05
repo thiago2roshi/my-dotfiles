@@ -5,6 +5,7 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
+xvt.font: xft::size=10
 
 ! special
 *.foreground:   #eceff1

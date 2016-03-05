@@ -7,5 +7,3 @@ config/mpd/sticker.sql
 config/ranger/bookmarks
 config/ranger/history
 config/ranger/tagged
-
-
