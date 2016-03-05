@@ -14,25 +14,19 @@
   [[default]]
     [[[child0]]]
       fullscreen = False
-      last_active_term = 8a53b443-a1f1-4ef9-b30d-6353ae6fad6b
+      last_active_term = e5169cc5-eccc-430c-ac10-872c7aa42d43
       last_active_window = True
       maximised = True
       order = 0
       parent = ""
       position = 0:27
-      size = 1366, 711
+      size = 1366, 699
       title = Mac Quayle-I Hate Society
       type = Window
     [[[child1]]]
       order = 0
       parent = child0
-      position = 680
-      ratio = 0.498169838946
-      type = HPaned
-    [[[child3]]]
-      order = 1
-      parent = child1
-      position = 355
+      position = 349
       ratio = 0.5
       type = VPaned
     [[[terminal2]]]
@@ -40,60 +34,10 @@
       parent = child1
       profile = default
       type = Terminal
-      uuid = 8a53b443-a1f1-4ef9-b30d-6353ae6fad6b
-    [[[terminal4]]]
-      command = ""
-      order = 0
-      parent = child3
-      profile = default
-      type = Terminal
       uuid = e5169cc5-eccc-430c-ac10-872c7aa42d43
-    [[[terminal5]]]
-      command = ncmpcpp
-      order = 1
-      parent = child3
-      profile = default
-      type = Terminal
-      uuid = 64a497e1-df39-4279-8fb2-24c29694fd3e
-  [[Nova disposição]]
-    [[[child0]]]
-      fullscreen = False
-      last_active_term = 8a53b443-a1f1-4ef9-b30d-6353ae6fad6b
-      last_active_window = True
-      maximised = True
-      order = 0
-      parent = ""
-      position = 0:27
-      size = 1366, 711
-      title = Mac Quayle-I Hate Society
-      type = Window
-    [[[child1]]]
-      order = 0
-      parent = child0
-      position = 680
-      ratio = 0.498169838946
-      type = HPaned
-    [[[child3]]]
+    [[[terminal3]]]
       order = 1
       parent = child1
-      position = 355
-      ratio = 0.5
-      type = VPaned
-    [[[terminal2]]]
-      order = 0
-      parent = child1
-      profile = default
-      type = Terminal
-      uuid = 8a53b443-a1f1-4ef9-b30d-6353ae6fad6b
-    [[[terminal4]]]
-      order = 0
-      parent = child3
-      profile = default
-      type = Terminal
-      uuid = e5169cc5-eccc-430c-ac10-872c7aa42d43
-    [[[terminal5]]]
-      order = 1
-      parent = child3
       profile = default
       type = Terminal
       uuid = 64a497e1-df39-4279-8fb2-24c29694fd3e
@@ -101,7 +45,7 @@
 [profiles]
   [[default]]
     background_color = "#263238"
-    background_darkness = 0.83
+    background_darkness = 0.86
     background_image = None
     background_type = transparent
     cursor_color = "#eceff1"
