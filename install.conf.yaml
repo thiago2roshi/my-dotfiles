@@ -1,4 +1,10 @@
+- defaults:
+    link:
+      create: true
+      relink: true
+
 - clean: ['~','~/.config']
+
 - link:
     ~/.profile: profile
     ~/.bashrc: bashrc
@@ -24,4 +30,4 @@
         path: config/conky/
 - shell:
     - [git submodule update, atualizando submodulos]
-    - [bash scripts/install_step.sh, concluindo instalação]
+
