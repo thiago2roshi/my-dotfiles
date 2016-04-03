@@ -1,0 +1,77 @@
+conky.config = {
+    alignment = 'top_right',
+    background = true,
+    border_width = 1,
+    cpu_avg_samples = 2,
+-- Use double buffering (reduces flicker, may not work for everyone)
+	double_buffer = true,
+
+    default_color = 'white',
+    default_outline_color = 'white',
+    default_shade_color = 'white',
+
+    draw_borders = false,
+    draw_graph_borders = false,
+    draw_outline = false,
+    draw_shades = false,
+    show_graph_scale = false,
+    show_graph_range = false,
+    console_graph_ticks = " ,_,▁,▂,▃,▄,▅,▆,▇,█",
+
+    use_xft = true,
+    font = 'Fira Mono for Powerline:size=08',
+--    font = 'Source Code Pro fo Powerline:size=10',
+
+    minimum_height = 5,
+    minimum_width = 5,
+
+    net_avg_samples = 2,
+    no_buffers = true,
+    out_to_console = false,
+    out_to_stderr = false,
+    extra_newline = false,
+
+    own_window = true,
+    own_window_class = 'Conky',
+    own_window_type = 'desktop',
+    own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+    own_window_argb_visual = true,
+    own_window_argb_value = 240,
+    own_window_colour = "#292C36",
+
+-- Useful shortenings #
+    short_units = true,
+    format_human_readable = true,
+    pad_percents = 0,
+    top_name_width = 12,
+
+-- Color scheme
+    color1 = '#9ACD32',
+    color2 = '#BAC3CF',
+    color3 = '#292C36',
+    color4 = '#383C4A',
+
+    stippled_borders = 0,
+    update_interval = 1.0,
+    uppercase = false,
+    use_spacer = 'none',
+
+-- Gap between borders of screen and text
+-- same thing as passing -x at command line
+    gap_x = 10,
+    gap_y = 50,
+    times_in_seconds = true,
+
+    mpd_host = 'localhost',
+    mpd_port = '6600'
+}
+
+
+
+conky.text = [[
+${color2}${alignc -3}${font DotMatrix:size=20}${time %H:%M}
+${font}${color1}${alignc}${voffset -10}${time %A}
+${voffset 10}${color1}Date:${color2}${alignr}${time %d/%m/%y}
+${color1}${font}Email:${color2}${alignr}${new_mails} new
+${color grey}Existem ${execpi 3600 checkupdates | wc -l} pacotes para atualizar
+]]

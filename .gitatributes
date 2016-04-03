@@ -1,0 +1,3 @@
+config/mail/msmtprc filter=remove-pass
+config/mail/mutt/muttrc filter=remove-pass
+config/mail/offlineimaprc filter=remove-pass
