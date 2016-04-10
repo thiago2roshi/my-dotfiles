@@ -60,13 +60,8 @@ conky.config = {
 -- same thing as passing -x at command line
     gap_x = 5,
     gap_y = 280,
-    times_in_seconds = true,
-
-    mpd_host = 'localhost',
-    mpd_port = '6600'
+    times_in_seconds = true
 }
-
-
 
 conky.text = [[
 Home: ${color2}${alignr}${fs_free /home}
