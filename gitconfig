@@ -3,7 +3,7 @@
 	name = thiago2roshi
 	signingkey = 902D9170
 [push]
-	default = matching
+	default = simple
 [core]
 	editor = nvim
 	pager = less -r
