@@ -16,7 +16,7 @@
  export DEFAULT_USER="thiago"
 
 # definindo PROMPT da direita -- eu acho
-export RPROMPT='$(date "+%T")'
+# export RPROMPT='$(date "+%T")'
 
 # exibe taskWarrior in zsh start
  task 
