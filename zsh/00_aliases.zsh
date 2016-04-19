@@ -7,17 +7,27 @@ alias ls='ls --color=auto'
 alias la='ls -A'
 alias l='ls -CF'
 alias ll='ls -alFh'
+
+# utils commands
 alias less='less -r'
-alias df='df -h'
-alias du='du -h -d 2'
+alias -g L='| less'
+alias -g S='| sort -n'
+alias more='less'
+alias free='free -m'     # size in MB
+alias cp="cp -i"         # confirm before overwriting something
+alias df='df -h'         # human readable
+alias du='du -h -d 2'    # human readable to
+alias clr='clear'        
+
+# cd it's for dummies
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
 
 # Colorize Everything
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
-# Some utils and variables aliases
-alias zshrc='$EDITOR ~/.zshrc'
 
 # git needs aliases?
 alias ga='git add'
