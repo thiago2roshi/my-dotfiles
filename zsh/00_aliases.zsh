@@ -3,21 +3,23 @@
 ################
 
 # ls aliases
-alias ls='ls --color=auto'
+alias ls='ls --tabsize=0 --literal --color=auto --show-control-chars --human-readable --group-directories-first -X'
 alias la='ls -A'
 alias l='ls -CF'
 alias ll='ls -alFh'
 
 # utils commands
 alias less='less -r'
-alias -g L='| less'
-alias -g S='| sort -n'
 alias more='less'
 alias free='free -m'     # size in MB
 alias cp="cp -i"         # confirm before overwriting something
 alias df='df -h'         # human readable
 alias du='du -h -d 2'    # human readable to
 alias clr='clear'        
+alias mkdir='mkdir -p'
+alias reload='source ~/.zshrc'
+alias -g xL='| less'     # global alias "<command> xL" equals a "<command> | less"
+alias -g xS='| sort -n'  # same thing upper
 
 # cd it's for dummies
 alias -g ...='../..'
