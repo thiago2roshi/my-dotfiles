@@ -1,23 +1,30 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="agnoster"
-plugins=(git pass taskwarrior colored-man-pages)
+source ~/.zplug/zplug
 
-# User configuration
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-export MANPATH="/usr/local/man:$MANPATH"
-source $ZSH/oh-my-zsh.sh
- 
-# You may need to manually set your language environment
-export LANG=pt_BR.UTF-8
+zplug "caiogondim/bullet-train-oh-my-zsh-theme"
 
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
+# Make sure you use double quotes
+zplug "zsh-users/zsh-history-substring-search"
+zplug "plugins/git",   from:oh-my-zsh, if:"which git"
+zplug "djui/alias-tips", as:plugin
+zplug "felixr/docker-zsh-completion", as:plugin
+zplug "zlsun/solarized-man", as:plugin
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Set priority to load command like a nice command
+# e.g., zsh-syntax-highlighting must be loaded
+# after executing compinit command and sourcing other plugins
+
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+
+if ! zplug check; then
+    zplug install
+fi
+
+# source and add to the PATH
+zplug load
+
 for FZSH in $HOME/.dotfiles/zsh/**/*.zsh; do
     source "$FZSH"
 done
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

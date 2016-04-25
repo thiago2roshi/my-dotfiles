@@ -19,6 +19,9 @@
     ~/.config/terminator:
             create: true
             path: config/terminator
+    ~/.config/mutt:
+            create: true
+            path: config/mail/mutt
     ~/.config/redshift.conf: config/redshift.conf
     ~/.zshrc: zshrc
     ~/.Xresources: Xresources
@@ -28,6 +31,7 @@
     ~/.config/conky: 
         create: true
         path: config/conky/
+    ~/.offlineimaprc: config/mail/offlineimaprc
 - shell:
     - [git submodule update, atualizando submodulos]
 
