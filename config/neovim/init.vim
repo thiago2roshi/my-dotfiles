@@ -4,7 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 "
 " filesystem tree
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 " colorscheme
 Plug 'morhetz/gruvbox'
 " status line para combinar com o powerline do zsh
