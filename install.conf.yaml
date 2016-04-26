@@ -5,6 +5,9 @@
 
 - clean: ['~','~/.config']
 
+- shell:
+    - ["git submodule update", "atualizando submodulos"]
+    
 - link:
     ~/.profile: profile
     ~/.bashrc: bashrc
@@ -28,6 +31,3 @@
     ~/.config/conky: 
         create: true
         path: config/conky/
-- shell:
-    - [git submodule update, atualizando submodulos]
-
