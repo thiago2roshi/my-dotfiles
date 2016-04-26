@@ -5,6 +5,9 @@
 
 - clean: ['~','~/.config']
 
+- shell:
+    - ["git submodule update", "atualizando submodulos"]
+    
 - link:
     ~/.profile: profile
     ~/.bashrc: bashrc
@@ -32,6 +35,3 @@
         create: true
         path: config/conky/
     ~/.offlineimaprc: config/mail/offlineimaprc
-- shell:
-    - [git submodule update, atualizando submodulos]
-
