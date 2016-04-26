@@ -6,32 +6,24 @@
 - clean: ['~','~/.config']
 
 - shell:
-    - ["git submodule update", "atualizando submodulos"]
+    - ["git submodule update --init --recursive", "Installing submodules"]
+    - ["git submodule update", "Updating submodules"]
     
 - link:
-    ~/.profile: profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.gitconfig: gitconfig
-    ~/.config/nvim:
-            create: true
-            path: config/neovim
-    ~/.config/mpd:
-            create: true
-            path: config/mpd
-    ~/.config/terminator:
-            create: true
-            path: config/terminator
-    ~/.config/mutt:
-            create: true
-            path: config/mail/mutt
+    ~/.dotfiles: ''
+    ~/.profile:     bash/profile
+    ~/.bashrc:      bash/bashrc_manjaro
+    ~/.bash_logout: bash/bash_logout
+    ~/.zshrc:       zsh/zshrc
+    ~/.gitconfig:   gitconfig
+    ~/.Xresources:  Xresources
+    
+    ~/bash_script: scripts/
+    
+    ~/.config/nvim:          config/neovim
+    ~/.config/mpd:           config/mpd
+    ~/.config/terminator:    config/terminator
+    ~/.config/mutt:          config/mail/mutt
     ~/.config/redshift.conf: config/redshift.conf
-    ~/.zshrc: zshrc
-    ~/.Xresources: Xresources
-    ~/bash_script:
-        create: true
-        path: scripts/
-    ~/.config/conky: 
-        create: true
-        path: config/conky/
-    ~/.offlineimaprc: config/mail/offlineimaprc
+    ~/.config/conky:         config/conky/
+    ~/.offlineimaprc:        config/mail/offlineimaprc

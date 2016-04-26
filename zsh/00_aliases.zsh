@@ -18,8 +18,6 @@ alias du='du -h -d 2'    # human readable to
 alias clr='clear'        
 alias mkdir='mkdir -p'
 alias reload='source ~/.zshrc'
-alias -g xL='| less'     # global alias "<command> xL" equals a "<command> | less"
-alias -g xS='| sort -n'  # same thing upper
 
 # cd it's for dummies
 alias -g ...='../..'
