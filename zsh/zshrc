@@ -1,13 +1,13 @@
 source ~/.zplug/zplug
 
-zplug "caiogondim/bullet-train-oh-my-zsh-theme"
-
-# Make sure you use double quotes
-zplug "zsh-users/zsh-history-substring-search"
-zplug "plugins/git",   from:oh-my-zsh, if:"which git"
-zplug "djui/alias-tips", as:plugin
-zplug "felixr/docker-zsh-completion", as:plugin
-zplug "zlsun/solarized-man", as:plugin
+# Plugins
+# fish-like autosuggestion 
+zplug "zsh-users/zsh-autosuggestions"
+# detect correct term color type
+zplug "chrissicool/zsh-256color",     as:plugin, use:"*.zsh"
+# You know you have an alias for that, right? <alias>
+zplug "djui/alias-tips",              as:plugin
+zplug "zlsun/solarized-man",          as:plugin
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -16,6 +16,12 @@ zplug "zlsun/solarized-man", as:plugin
 # e.g., zsh-syntax-highlighting must be loaded
 # after executing compinit command and sourcing other plugins
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
+# history search 
+zplug "zsh-users/zsh-history-substring-search"
+# completions must be end of all things
+zplug "felixr/docker-zsh-completion", as:plugin
+# theme is cool thing
+zplug "caiogondim/bullet-train-oh-my-zsh-theme"
 
 # local person plugins
 zplug "$HOME/.dotfiles/zsh", from:local, use:"**/*.zsh"
