@@ -1,20 +1,20 @@
 - defaults:
     link:
-      create: true
       relink: true
+      create: true
 
 - clean: ['~','~/.config']
 
 - shell:
     - ["git submodule update --init --recursive", "Installing submodules"]
-    - ["git submodule update", "Updating submodules"]
     
 - link:
     ~/dotfiles: ''
     ~/.profile:     bash/profile
     ~/.bashrc:      bash/bashrc_manjaro
     ~/.bash_logout: bash/bash_logout
-    ~/.zshrc:       zsh/zshrc
+    ~/.zshrc:       zsh/zshrc.pre.grml
+    ~/.zshrc.local: zsh/zshrc.local
     ~/.gitconfig:   gitconfig
     ~/.Xresources:  Xresources
     
