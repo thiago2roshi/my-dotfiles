@@ -10,7 +10,7 @@
     - ["git submodule update", "Updating submodules"]
     
 - link:
-    ~/.dotfiles: ''
+    ~/dotfiles: ''
     ~/.profile:     bash/profile
     ~/.bashrc:      bash/bashrc_manjaro
     ~/.bash_logout: bash/bash_logout

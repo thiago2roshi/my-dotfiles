@@ -1,13 +1,23 @@
+# for FZSH in `dirname $0`/functions/**/*.zsh; do
+#     source "$FZSH"
+# done
+# # load completion folder
+# fpath+="`dirname $0`/completion"
+
 source ~/.zplug/zplug
 
+# theme is cool thing
+#zplug "caiogondim/bullet-train-oh-my-zsh-theme"
+zplug "bhilburn/powerlevel9k", of:powerlevel9k.zsh-theme
+
 # Plugins
-# fish-like autosuggestion 
+# fish-like autosuggestion
 zplug "zsh-users/zsh-autosuggestions"
 # detect correct term color type
-zplug "chrissicool/zsh-256color",     as:plugin, use:"*.zsh"
+zplug "chrissicool/zsh-256color", as:plugin, #use:"*.zsh"
 # You know you have an alias for that, right? <alias>
-zplug "djui/alias-tips",              as:plugin
-zplug "zlsun/solarized-man",          as:plugin
+zplug "djui/alias-tips", as:plugin
+zplug "zlsun/solarized-man", as:plugin
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -16,15 +26,13 @@ zplug "zlsun/solarized-man",          as:plugin
 # e.g., zsh-syntax-highlighting must be loaded
 # after executing compinit command and sourcing other plugins
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
-# history search 
+# history search
 zplug "zsh-users/zsh-history-substring-search"
 # completions must be end of all things
 zplug "felixr/docker-zsh-completion", as:plugin
-# theme is cool thing
-zplug "caiogondim/bullet-train-oh-my-zsh-theme"
 
 # local person plugins
-zplug "$HOME/.dotfiles/zsh", from:local, use:"**/*.zsh"
+zplug "$HOME/.dotfiles/zsh", from:local
 
 if ! zplug check; then
     zplug install
@@ -32,8 +40,3 @@ fi
 
 # source and add to the PATH
 zplug load
-
-# testing use of zplug local
-#for FZSH in $HOME/.dotfiles/zsh/**/*.zsh; do
-#    source "$FZSH"
-#done
