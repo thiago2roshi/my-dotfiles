@@ -7,6 +7,9 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 xvt.font: xft::size=10
 
+xterm*faceName: Hack Regular
+xterm*faceSize: 11
+
 ! special
 *.foreground:   #93a1a1
 *.background:   #002b36
