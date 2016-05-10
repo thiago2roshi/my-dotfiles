@@ -6,6 +6,9 @@
 
 source ~/.zplug/zplug
 
+# local person plugins
+zplug "$HOME/.dotfiles/zsh", from:local
+
 # theme is cool thing
 #zplug "caiogondim/bullet-train-oh-my-zsh-theme"
 zplug "bhilburn/powerlevel9k", of:powerlevel9k.zsh-theme
@@ -30,9 +33,6 @@ zplug "zsh-users/zsh-syntax-highlighting", nice:10
 zplug "zsh-users/zsh-history-substring-search"
 # completions must be end of all things
 zplug "felixr/docker-zsh-completion", as:plugin
-
-# local person plugins
-zplug "$HOME/.dotfiles/zsh", from:local
 
 if ! zplug check; then
     zplug install
