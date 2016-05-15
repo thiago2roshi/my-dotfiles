@@ -6,16 +6,15 @@
 # exibe taskWarrior in zsh start
  task
 
-
-
 export PAGER=${PAGER:-less}
 
 # command history control
 export HISTSIZE=1000;
+export SAVEHIST=$HISTSIZE;
 export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
-export HISTFILE='~/.zsh_history'
+export HISTFILE=$HOME/.zsh_history
 
 # definindo usuario padrao
 export DEFAULT_USER="thiago"
@@ -44,3 +43,6 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # LANG env
 export LANG=pt_BR.UTF-8
+
+# zsh-autosuggestions color
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=red'

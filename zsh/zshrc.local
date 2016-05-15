@@ -1,39 +1,38 @@
-# for FZSH in `dirname $0`/functions/**/*.zsh; do
-#     source "$FZSH"
-# done
-# # load completion folder
-# fpath+="`dirname $0`/completion"
+[[ -d ~/.zplug ]] || {
+  git clone https://github.com/b4b4r07/zplug ~/.zplug
+  source ~/.zplug/init.zsh && zplug update --self
+}
 
 source ~/.zplug/zplug
 
-# local person plugins
-zplug "$HOME/.dotfiles/zsh", from:local
-
-# theme is cool thing
-#zplug "caiogondim/bullet-train-oh-my-zsh-theme"
-zplug "bhilburn/powerlevel9k", of:powerlevel9k.zsh-theme
 
 # Plugins
-# fish-like autosuggestion
-zplug "zsh-users/zsh-autosuggestions"
 # detect correct term color type
-zplug "chrissicool/zsh-256color", as:plugin, #use:"*.zsh"
+zplug "chrissicool/zsh-256color"
+
 # You know you have an alias for that, right? <alias>
 zplug "djui/alias-tips", as:plugin
+
 zplug "zlsun/solarized-man", as:plugin
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set priority to load command like a nice command
-# e.g., zsh-syntax-highlighting must be loaded
-# after executing compinit command and sourcing other plugins
-zplug "zsh-users/zsh-syntax-highlighting", nice:10
-# history search
-zplug "zsh-users/zsh-history-substring-search"
 # completions must be end of all things
 zplug "felixr/docker-zsh-completion", as:plugin
 
+# e.g., zsh-syntax-highlighting must be loaded
+# after executing compinit command and sourcing other plugins
+zplug "zsh-users/zsh-syntax-highlighting", nice:10
+
+<<<<<<< HEAD
+=======
+#fish-like autosuggestion
+zplug "zsh-users/zsh-autosuggestions", nice:11
+
+# theme is cool thing
+#zplug "caiogondim/bullet-train-oh-my-zsh-theme"
+zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+# check if all addons is installed, and install
+>>>>>>> de28f20f5eb7f9acdec2176efbdb18b259912853
 if ! zplug check; then
     zplug install
 fi

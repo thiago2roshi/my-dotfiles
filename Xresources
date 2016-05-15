@@ -5,10 +5,14 @@ Xft.rgba: rgb
 Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-xvt.font: xft::size=10
 
+!xterm*faceName: Hack:size=8:antialias=false
 xterm*faceName: Hack Regular
-xterm*faceSize: 11
+xterm*faceSize: 10
+xterm*font: 7x13
+xterm*termName: xterm-256color
+XTerm*locale: true
+XTerm*metaSendsEscape: true
 
 ! special
 *.foreground:   #93a1a1

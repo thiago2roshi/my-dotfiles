@@ -1,3 +1,6 @@
+##
+# functions loader
+##
 for FZSH in `dirname $0`/functions/**/*.zsh; do
     source "$FZSH"
 done
