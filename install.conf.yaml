@@ -13,7 +13,7 @@
     ~/.profile:     bash/profile
     ~/.bashrc:      bash/bashrc_manjaro
     ~/.bash_logout: bash/bash_logout
-    ~/.zshrc:       zsh/zshrc.pre.grml
+    ~/.zshrc:       zsh/zshrc.pure
     ~/.zshrc.local: zsh/zshrc.local
     ~/.gitconfig:   gitconfig
     ~/.Xresources:  Xresources

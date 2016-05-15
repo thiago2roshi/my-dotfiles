@@ -18,11 +18,13 @@ alias du='du -h -d 2'    # human readable to
 alias clr='clear'        
 alias mkdir='mkdir -p'
 alias reload='source ~/.zshrc'
+alias dd='dd status=progress' # add progress output-GNU Coreutils 8.24+
 
 # cd it's for dummies
-alias -g ...='../..'
-alias -g ....='../../..'
-alias -g .....='../../../..'
+alias ...='../..'
+alias ....='../../..'
+alias .....='../../../..'
+alias ~='cd ~'
 
 # I dont need remember filetype-program
 alias -s txt="nvim"  # command "file.txt" equals "nvim file.txt"
