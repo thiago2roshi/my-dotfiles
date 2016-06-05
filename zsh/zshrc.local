@@ -1,10 +1,11 @@
+# Installing zplug
 [[ -d ~/.zplug ]] || {
   git clone https://github.com/b4b4r07/zplug ~/.zplug
   source ~/.zplug/init.zsh && zplug update --self
 }
 
+# Starting Zplug
 source ~/.zplug/zplug
-
 
 # Plugins
 # detect correct term color type
@@ -15,24 +16,25 @@ zplug "djui/alias-tips", as:plugin
 
 zplug "zlsun/solarized-man", as:plugin
 
-# completions must be end of all things
-zplug "felixr/docker-zsh-completion", as:plugin
+# Fish-like autosuggestion
+zplug "zsh-users/zsh-autosuggestions"
 
 # e.g., zsh-syntax-highlighting must be loaded
 # after executing compinit command and sourcing other plugins
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
-<<<<<<< HEAD
-=======
-#fish-like autosuggestion
-zplug "zsh-users/zsh-autosuggestions", nice:11
+# ZSH port of Fish shell's history search
+zplug "zsh-users/zsh-history-substring-search", nice:12
 
 # theme is cool thing
-#zplug "caiogondim/bullet-train-oh-my-zsh-theme"
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
+# completions must be end of all things
+zplug "felixr/docker-zsh-completion", as:plugin
+
+zplug "zsh-users/zsh-completions", as:plugin
+
 # check if all addons is installed, and install
->>>>>>> de28f20f5eb7f9acdec2176efbdb18b259912853
 if ! zplug check; then
     zplug install
 fi
