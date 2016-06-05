@@ -22,3 +22,4 @@
     ~/.config/redshift.conf: config/redshift.conf
     ~/.config/conky:         config/conky/
     ~/.offlineimaprc:        config/mail/offlineimaprc
+    ~/.config/neofetch:      config/neofetch
