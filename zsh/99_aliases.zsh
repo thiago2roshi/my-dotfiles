@@ -3,10 +3,10 @@
 ################
 
 # ls aliases
-alias ls='ls --tabsize=0 --literal --color=auto --show-control-chars --human-readable --group-directories-first -X'
+alias ls='ls --tabsize=0 --literal --color=auto --show-control-chars --classify --human-readable --group-directories-first -X'
 alias la='ls -A'
-alias l='ls -CF'
-alias ll='ls -alFh'
+alias l='ls -C'
+alias ll='ls -alh'
 
 # utils commands
 alias less='less -r'
@@ -19,6 +19,7 @@ alias clr='clear'
 alias mkdir='mkdir -p'
 alias reload='source ~/.zshrc'
 alias dd='dd status=progress' # add progress output-GNU Coreutils 8.24+
+alias help=run-help           # active helper in zsh
 
 # cd it's for dummies
 alias ...='../..'

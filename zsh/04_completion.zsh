@@ -18,32 +18,33 @@ zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
 ## VCS
 # vcs_info
 zstyle ':vcs_info:*'                      enable git hg svn
+
 # check-for-changes can be really slow.
 # you should disable it, if you work with large repositories
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' unstagedstr '%F{62}D%F{237}IRTY%f'  # display ¹ if there are unstaged changes
-zstyle ':vcs_info:*' stagedstr '%F{62}S%F{237}TAGED'    # display ² if there are staged changes
-zstyle ':vcs_info:*' actionformats "${FMT_BRANCH}${FMT_ACTION}" "${FMT_PATH}"
-zstyle ':vcs_info:*' formats       "${FMT_BRANCH}"              "${FMT_PATH}"
-zstyle ':vcs_info:*' nvcsformats   ""                           "%~"
+zstyle ':vcs_info:*' unstagedstr       '%F{62}D%F{237}IRTY%f'   # display ¹ if there are unstaged changes
+zstyle ':vcs_info:*' stagedstr         '%F{62}S%F{237}TAGED'    # display ² if there are staged changes
+zstyle ':vcs_info:*' actionformats     "${FMT_BRANCH}${FMT_ACTION}" "${FMT_PATH}"
+zstyle ':vcs_info:*' formats           "${FMT_BRANCH}"              "${FMT_PATH}"
+zstyle ':vcs_info:*' nvcsformats       ""                           "%~"
 
+
+zstyle ':completion:*' 			     rehash true # Persistent Rehash
 
 zstyle ':completion:*'                       accept-exact '*(N)'
+zstyle ':completion:*'                       match-list 'm:{A-Z}={a-z}'
 zstyle ':completion:*'                       separate-sections 'yes'
 zstyle ':completion:*'                       list-dirs-first true
 zstyle ':completion:*:default'               list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*'                       menu select=200
 zstyle ':completion:*'                       use-perl=1
 #zstyle ':completion:*'                       my-accounts='m@japh.se'
-zstyle ':completion:*' 			     rehash true # Persistent rehash
-
 zstyle ':completion:*'                       squeeze-slashes true
 zstyle ':completion:*:cd:*'                  ignore-parents parent pwd
 #zstyle ':completion:*:cd:*'                  tag-order 'named-directories'
 
 zstyle ':completion:*:(all-|)files'          ignored-patterns '*.un~'
-zstyle ':completion:*:*:kill:*:processes' \
-  list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:*:kill:*:processes'    list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 zstyle ':completion::complete:*'             use-cache on
 zstyle ':completion::complete:*'             cache-path ~/etc/cache/$HOST
@@ -52,7 +53,9 @@ zstyle ':completion:*:processes-names'       command 'ps -awxho command'
 zstyle ':completion:*'                       matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:functions'             ignored-patterns '_*'
 
-zstyle ':completion:*' group-name            ''
+zstyle ':completion:*:ls:*'                  ignore-line yes
+
+zstyle ':completion:*'                       group-name ''
 zstyle ':completion:*:*:mplayer:*'           tag-order files
 zstyle ':completion:*:*:mplayer:*'           file-patterns   \
        '*.(rmvb|mkv|mpg|wmv|mpeg|avi|flv|mp3|mp4|flac|ogg):video' \

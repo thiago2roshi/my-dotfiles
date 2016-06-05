@@ -19,6 +19,9 @@ export HISTFILE=$HOME/.zsh_history
 # definindo usuario padrao
 export DEFAULT_USER="thiago"
 
+# editor padrao
+export EDITOR='nvim'
+
 # exportando path
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/:/usr/local/games"
 export MANPATH="/usr/local/man:$MANPATH"
@@ -44,5 +47,12 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 # LANG env
 export LANG=pt_BR.UTF-8
 
-# zsh-autosuggestions color
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=red'
+# PowerLevel9k configs
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_SHORTEN_DELIMITER='*'
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
