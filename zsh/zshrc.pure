@@ -4,6 +4,13 @@
 
 autoload -U colors   && colors
 autoload -U vcs_info && vcs_info
+autoload -Uz promptinit && promptinit
+
+# Helper Command 
+autoload -Uz run-help
+autoload -Uz run-help-git
+autoload -Uz run-help-svn
+autoload -Uz run-help-svk
 
 ##
 # History
@@ -17,11 +24,13 @@ setopt inc_append_history       # add commands as they are typed, don't wait unt
 setopt share_history            # share hist between sessions4
 
 # History search
-autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
+#autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
+#zle -N up-line-or-beginning-search
+#zle -N down-line-or-beginning-search
 setopt inc_append_history   # insert commands in history file in time
 setopt hist_ignore_all_dups # To prevent history save duplicated entries
+
+zmodload zsh/terminfo
 
 ##
 # Various
@@ -46,11 +55,15 @@ for r in $HOME/.dotfiles/zsh/*.zsh; do
   source $r
 done
 
-# Helper Command 
-autoload -Uz run-help
-autoload -Uz run-help-git
-autoload -Uz run-help-svn
-autoload -Uz run-help-svk
+autoload compinit && compinit 
 
-# ok man, I'm load zplug now
-source $HOME/.dotfiles/zsh/zshrc.local
+# Load plugins.zsh files
+for r in $HOME/.dotfiles/zsh/plugins/**/*.zsh; do
+  if [[ $DEBUG > 0 ]]; then
+    echo "zsh: sourcing $r"
+  fi
+  source $r
+done
+
+# theme
+source $HOME/.dotfiles/zsh/plugins/powerlevel9k/powerlevel9k.zsh-theme

@@ -12,21 +12,24 @@ key[Left]=${terminfo[kcub1]}
 key[Right]=${terminfo[kcuf1]}
 key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
+key[CtrlLeft]="${terminfo[kLFT]}"
+key[CtrlRight]="${terminfo[kRIT]}"
 
 # setup key accordingly
-[[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"    beginning-of-line
-[[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"     end-of-line
-[[ -n "${key[Insert]}"  ]]  && bindkey  "${key[Insert]}"  overwrite-mode
-[[ -n "${key[Delete]}"  ]]  && bindkey  "${key[Delete]}"  delete-char
-[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"      up-line-or-history
-[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"    down-line-or-history
-[[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"    backward-char
-[[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"   forward-char
+[[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"      beginning-of-line
+[[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"       end-of-line
+[[ -n "${key[Insert]}"  ]]  && bindkey  "${key[Insert]}"    overwrite-mode
+[[ -n "${key[Delete]}"  ]]  && bindkey  "${key[Delete]}"    delete-char
 
-# zsh-substring-history-serch bindkeys
+#[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"        up-line-or-history
+#[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"      down-line-or-history
+[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"        history-substring-search-up
+[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"      history-substring-search-down
+[[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"      backward-char
+[[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"     forward-char
 
-[[ -n "${key[Up]}"   ]] && bindkey "${key[Up]}"   history-substring-search-down
-[[ -n "${key[Down]}" ]] && bindkey "${key[Down]}" history-substring-search-down
+[[ -n "${key[CtrlLeft]}" ]] && bindkey  "${key[CtrlLeft]}"  backward-word
+[[ -n "${key[Ctrlight]}" ]] && bindkey  "${key[CtrlRight]}" forward-word
 
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.

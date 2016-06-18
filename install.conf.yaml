@@ -1,7 +1,7 @@
 - clean: ['~','~/.config']
 
 - shell:
-    - ["git submodule update --init --recursive", "Installing submodules"]
+    - ["git submodule update", "Installing submodules"]
     
 - link:
     ~/dotfiles: ''

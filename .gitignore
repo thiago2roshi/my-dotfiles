@@ -4,12 +4,14 @@ config/mpd/pid
 config/mpd/playlists
 config/mpd/state
 config/mpd/sticker.sql
-
+#
 config/ranger/bookmarks
 config/ranger/history
 config/ranger/tagged
-
+#
+config/neovim/autoload
+config/neovim/bundle
 config/neovim/plugged
-
+#
 zplug
 

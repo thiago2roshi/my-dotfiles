@@ -6,14 +6,41 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-!xterm*faceName: Hack:size=8:antialias=false
-xterm*faceName: Hack Regular
-xterm*faceSize: 10
-xterm*font: 7x13
-xterm*termName: xterm-256color
-XTerm*locale: true
-XTerm*metaSendsEscape: true
+*font:     xft:Hack:style=Regular:size=10,xft:Fira\ Mono\ for\ Powerline:size=10
+*boldFont: xft:Hack:style=Regular:size=10
+*letterSpace: -1
+!========================
+! Xterm Config
 
+xterm*termName: xterm-256color
+XTerm*metaSendsEscape: true
+xterm*utf8: 3
+
+!========================
+! URxvt Config
+
+URxvt*utf8:      3
+URxvt*geometry:  96x30
+URxvt.antialias: true
+URxvt*termName:  rxvt-unicode-256color
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! for LESS use
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.secondaryWheel: 1
+
+!========================
+! ColorScheme
+!
 ! special
 *.foreground:   #93a1a1
 *.background:   #002b36
@@ -50,3 +77,4 @@ XTerm*metaSendsEscape: true
 ! white
 *.color7:       #93a1a1
 *.color15:      #fdf6e3
+

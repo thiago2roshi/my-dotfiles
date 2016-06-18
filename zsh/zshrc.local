@@ -23,9 +23,6 @@ zplug "zsh-users/zsh-autosuggestions"
 # after executing compinit command and sourcing other plugins
 zplug "zsh-users/zsh-syntax-highlighting", nice:10
 
-# ZSH port of Fish shell's history search
-zplug "zsh-users/zsh-history-substring-search", nice:12
-
 # theme is cool thing
 zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
@@ -34,6 +31,10 @@ zplug "felixr/docker-zsh-completion", as:plugin
 
 zplug "zsh-users/zsh-completions", as:plugin
 
+# Generator of completion file
+zplug "RobSis/zsh-completion-generator", as:plugin
+GENCOMPL_FPATH="$HOME/.dotfiles/zsh/gen-completion"
+
 # check if all addons is installed, and install
 if ! zplug check; then
     zplug install
@@ -41,3 +42,7 @@ fi
 
 # source and add to the PATH
 zplug load
+
+#local files test
+source $HOME/.dotfiles/zsh/zshrc.pure
+
