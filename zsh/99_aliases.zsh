@@ -8,17 +8,23 @@ alias la='ls -A'
 alias l='ls -C'
 alias ll='ls -alh'
 
+# Colorize Everything
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
 # utils commands
 alias less='less -r'
 alias more='less'
-alias free='free -m'     # size in MB
-alias cp="cp -i"         # confirm before overwriting something
-alias df='df -h'         # human readable
-alias du='du -h -d 2'    # human readable to
+alias free='free -m'                          # size in MB
+alias cp="cp -i"                              # confirm before overwriting something
+alias mv='timeout 8 mv -iv'                   # limit potencial damage
+alias rm='timeout 3 rm -Iv --one-file-system' # limit potencial damage too
+alias df='df -h'                              # human readable
+alias du='du -h -d 2'                         # human readable to
 alias clr='clear'        
-alias mkdir='mkdir -p'
+alias mkdir='mkdir -p -v'
 alias reload='source ~/.zshrc'
-alias dd='dd status=progress' # add progress output-GNU Coreutils 8.24+
 alias help=run-help           # active helper in zsh
 
 # cd it's for dummies
@@ -28,14 +34,10 @@ alias .....='../../../..'
 alias ~='cd ~'
 
 # I dont need remember filetype-program
-alias -s txt="nvim"  # command "file.txt" equals "nvim file.txt"
+# USE-> # "file.txt" equals # "nvim file.txt"
+alias -s txt="nvim"  
 alias -s mkv="mpv"
 alias -s html="w3m"
-
-# Colorize Everything
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
 
 # git needs aliases?
 alias ga='git add'
@@ -59,3 +61,6 @@ alias rsync-synchronize="rsync -avzu --delete --progress -h"
 alias mutt='mutt -F ~/.config/mutt/muttrc'
 alias clima='curl http://wttr.in/SaoPaulo'
 alias docker='sudo docker'
+
+# other aliases
+alias dmesg='dmesg --color=always'
