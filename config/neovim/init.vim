@@ -3,28 +3,40 @@
 " ###### PLUGIN {{{
 " iniciando vim-plug
 call plug#begin('~/.config/nvim/plugged')
-"" agora pode colocar os plugins
-"
+" agora pode colocar os plugins
+
 " filesystem tree
 " NERD tree will be loaded on the first invocation of NERDTreeToggle command
 Plug 'scrooloose/nerdtree'
-"
+
 " colorscheme
 Plug 'morhetz/gruvbox'
-"
+
 " status line para combinar com o powerline do zsh
 Plug 'vim-airline/vim-airline'
-"
+
 " ACK for VIM
 Plug 'mileszs/ack.vim'
-"
+
 " Tabular use for VIM
 Plug 'godlygeek/tabular'
-"
+
+Plug 'jistr/vim-nerdtree-tabs.git'
+
+"" Custom bundles
+"" PHP Bundle
+Plug 'arnaud-lb/vim-php-namespace'
+
+"" HTML Bundle
+Plug 'amirh/HTML-AutoCloseTag'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'tpope/vim-haml'
+Plug 'mattn/emmet-vim'
+
 " Add plugins to &runtimepath
 call plug#end()
-" }}}
-
+"###### }}}
 
 " ##### ViM configs {{{
 
@@ -45,14 +57,16 @@ set nowritebackup              " redudacy ^
 set undofile                   " Persistent Undo
 set undolevels=500             " Persist levels
 set undoreload=500             " Persist reloads
+nnoremap <space> za             " space open/close folds
+
 
 " cool tab
-setlocal tabstop=4 
-setlocal softtabstop=4
-setlocal shiftwidth=4
-setlocal textwidth=80
-setlocal smarttab
-setlocal expandtab
+set tabstop=4 
+set softtabstop=4
+set shiftwidth=4
+set textwidth=80
+set smarttab
+set expandtab
 
 filetype indent on
 set directory=$HOME/.cache/vim//,. " Cache dir

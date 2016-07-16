@@ -57,3 +57,5 @@ POWERLEVEL9K_SHORTEN_DELIMITER='*'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
 
+# programs Variables
+DIANA_SECRET_TOKEN='nV-SNuYxdrwmMWYboMvbIcidko_GMvMS'

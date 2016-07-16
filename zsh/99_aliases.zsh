@@ -3,7 +3,8 @@
 ################
 
 # ls aliases
-alias ls='ls --tabsize=0 --literal --color=auto --show-control-chars --classify --human-readable --group-directories-first -X'
+# using space in command for ignoring in history
+alias ls=' ls --tabsize=0 --literal --color=auto --show-control-chars --classify --human-readable --group-directories-first -X'
 alias la='ls -A'
 alias l='ls -C'
 alias ll='ls -alh'
@@ -25,7 +26,14 @@ alias du='du -h -d 2'                         # human readable to
 alias clr='clear'        
 alias mkdir='mkdir -p -v'
 alias reload='source ~/.zshrc'
-alias help=run-help           # active helper in zsh
+alias help=run-help                           # active helper in zsh
+alias 'jobs'='jobs -l || echo "no running jobs"'
+# it's time for global things
+alias -g ':L'='| less'
+
+
+# Aria2 its so cool, but need a work
+alias download='aria2c --conf-path=$HOME/.config/aria2/aria2.conf'
 
 # cd it's for dummies
 alias ...='../..'

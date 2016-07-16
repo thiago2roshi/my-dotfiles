@@ -2,13 +2,11 @@
 zstyle ':completion:*:functions'          ignored-patterns '_*'
 
 # format autocompletion style
-zstyle ':completion:*:descriptions'       format "%{$c1%}%d%{$reset_color%}"
-zstyle ':completion:*:corrections'        format "%{$c3%}%d%{$reset_color%}"
-zstyle ':completion:*:messages'           format "%{$c1%}%d%{$reset_color%}"
-zstyle ':completion:*:warnings'           format "%{$c1%}%d%{$reset_color%}"
+#zstyle ':completion:*:descriptions'       format "%{$c1%}%d%{$reset_color%}"
+#zstyle ':completion:*:corrections'        format "%{$c3%}%d%{$reset_color%}"
+#zstyle ':completion:*:messages'           format "%{$c1%}%d%{$reset_color%}"
+#zstyle ':completion:*:warnings'           format "%{$c1%}%d%{$reset_color%}"
 
-# zstyle show completion menu if 2 or more items to select
-zstyle ':completion:*'                    menu select=2
 
 # zstyle kill menu
 zstyle ':completion:*:*:kill:*'           menu yes select
@@ -127,3 +125,11 @@ zstyle ':completion:*:*:*:users' ignored-patterns \
         operator pcap postfix postgres privoxy pulse pvm quagga radvd \
         rpc rpcuser rpm shutdown squid sshd sync uucp vcsa xfs
 zstyle '*' single-ignored show
+
+# Quote stuff that looks like URLs automatically.
+# tranks: http://chneukirchen.org/dotfiles/.zshrc
+autoload -U url-quote-magic
+zstyle ':urlglobber' url-other-schema ftp git gopher http https magnet
+zstyle ':url-quote-magic:*' url-metas '*?[]^(|)~#='  # dropped { }
+zle -N self-insert url-quote-magic
+
