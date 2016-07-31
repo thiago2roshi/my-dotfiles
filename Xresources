@@ -9,15 +9,13 @@ Xft.lcdfilter: lcddefault
 *font:     xft:Hack:style=Regular:size=10,xft:Fira\ Mono\ for\ Powerline:size=10
 *boldFont: xft:Hack:style=Regular:size=10
 *letterSpace: -1
-!========================
-! Xterm Config
+!=== Xterm Config
 
 xterm*termName: xterm-256color
 XTerm*metaSendsEscape: true
 xterm*utf8: 3
 
-!========================
-! URxvt Config
+!=== URxvt Config
 
 URxvt*utf8:      3
 URxvt*geometry:  96x30
@@ -38,8 +36,36 @@ URxvt.secondaryScreen: 1
 URxvt.secondaryScroll: 0
 URxvt.secondaryWheel: 1
 
-!========================
-! ColorScheme
+!=== Rofi
+!
+rofi.location:          0
+rofi.color-enabled:     true
+!                       'background', 'border'
+rofi.color-window:      argb:dc111111, argb:dc111111
+! State:                'bg',          'fg',   'bgalt',       'hlbg',        'hlfg'
+rofi.color-normal:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.color-urgent:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.color-active:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.separator-style:   none
+rofi.fullscreen:        true
+rofi.padding:           250
+rofi.hide-scrollbar:    true
+rofi.line:              7
+rofi.line-margin:       2
+rofi.fake-transparency: false
+rofi.yoffset:           10
+rofi.xoffset:           0
+rofi.width:             1366
+rofi.opacity:           80
+rofi.font:              Hack 16
+rofi.bw:                0
+
+! Pidfile location
+!rofi.pid: $HOME/.cache/rofi.pid
+! Disable history in run/ssh
+rofi.disable-history: false
+
+!=== ColorScheme
 !
 ! special
 *.foreground:   #93a1a1
