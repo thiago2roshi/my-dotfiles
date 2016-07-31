@@ -16,39 +16,41 @@ function query_mute {
 	fi
 }
 
-wallpaper=/tmp/wallpaper_ambience/wallpaper
-converted=$wallpaper
+#wallpaper=/tmp/wallpaper_ambience/wallpaper
+wallpaper="$(gsettings get org.gnome.desktop.background picture-uri | sed "s/'//g" | sed "s/^.//")"
+CONVERTED=$wallpaper
 vol=$(query_vol)
 
 # create the file path
 mute=false
 if [[ $(query_mute) == true ]]; then
-	converted=$converted"_mute"
+	CONVERTED=$CONVERTED"_mute"
 	mute=true
 else
-	converted=$converted"_"$vol
+	CONVERTED=$CONVERTED"_"$vol
 fi
 
 vpn=false
-if [[ -n $(pgrep openvpn) ]]; then
-	converted=$converted"_vpn"
-	vpn=true
-fi
+#if [[ -n $(pgrep openvpn) ]]; then
+#	CONVERTED=$CONVERTED"_vpn"
+#	vpn=true
+#fi
 
 # create the file, if it isn't cached
-if [[ ! -f $converted ]]; then
+if [[ ! -f $CONVERTED ]]; then
 	if [[ $mute == true ]]; then
-		convert $wallpaper -fill navyblue -colorize 60 $converted
-		convert $converted -fill black -colorize 50 $converted
+		convert $wallpaper -fill navyblue -colorize 60 $CONVERTED
+		convert $CONVERTED -fill black -colorize 50 $converted
 	else
-		convert $wallpaper -fill blue -colorize $(((100 - vol) / 2)) $converted
-		convert $converted -fill black -colorize $(((100 - vol) / 2)) $converted
+		convert $wallpaper -fill blue -colorize $(((100 - vol) / 2)) $CONVERTED
+		convert $CONVERTED -fill black -colorize $(((100 - vol) / 2)) $converted
 	fi
 
 	if [[ $vpn == false ]]; then
-		convert $converted -fill red -colorize 50 $converted
+		convert $CONVERTED -fill red -colorize 50 $converted
 	fi
 
 fi
 
-feh --bg-scale $converted
+#feh --bg-scale $CONVERTED
+gsettings set org.gnome.desktop.background picture-uri $CONVERTED
