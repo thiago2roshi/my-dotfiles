@@ -83,4 +83,7 @@ let g:airline_powerline_fonts=1 " vim-airline com pwrLine font
 let g:python_host_skip_check= 1
 let g:loaded_python_provider = 1
 let g:loaded_python3_provider = 1
+" save fold (dobras)
+au BufWinLeave * mkview
+au BufWinEnter * silent loadview
 " ##### }}}
