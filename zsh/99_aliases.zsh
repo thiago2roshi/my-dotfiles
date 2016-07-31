@@ -29,8 +29,8 @@ alias reload='source ~/.zshrc'
 alias help=run-help                           # active helper in zsh
 alias 'jobs'='jobs -l || echo "no running jobs"'
 # it's time for global things
-alias -g ':L'='| less'
-
+alias -g ':L'='| color-less'
+alias -g ':G'='| grep'
 
 # Aria2 its so cool, but need a work
 alias download='aria2c --conf-path=$HOME/.config/aria2/aria2.conf'
@@ -72,3 +72,4 @@ alias docker='sudo docker'
 
 # other aliases
 alias dmesg='dmesg --color=always'
+alias disks='echo "╓───── m o u n t . p o i n t s"; echo "╙────────────────────────────────────── ─ ─ "; lsblk -a; echo ""; echo "╓───── d i s k . u s a g e"; echo "╙────────────────────────────────────── ─ ─ "; df;' # cool echo df:

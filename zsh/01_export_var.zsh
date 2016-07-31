@@ -23,7 +23,7 @@ export DEFAULT_USER="thiago"
 export EDITOR='nvim'
 
 # exportando path
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/:/usr/local/games"
+export PATH="$HOME/.dotfiles/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/:/usr/local/games:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # definindo PROMPT da direita -- eu acho
