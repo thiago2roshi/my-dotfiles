@@ -4,4 +4,4 @@
 # To prevent your $PATH being overwritten, set it in ~/.zprofile.
 
 typeset -U path
-path=(~/bin /other/things/in/path $path[@])
+path=(~/bash_script $path[@])

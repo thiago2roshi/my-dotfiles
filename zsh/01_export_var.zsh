@@ -8,22 +8,15 @@
 
 export PAGER=${PAGER:-less}
 
-# command history control
-export HISTSIZE=1000;
-export SAVEHIST=$HISTSIZE;
-export HISTFILESIZE=$HISTSIZE;
-export HISTCONTROL=ignoredups;
-export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
-export HISTFILE=$HOME/.zsh_history
-
 # definindo usuario padrao
 export DEFAULT_USER="thiago"
 
 # editor padrao
 export EDITOR='nvim'
+export VISUAL='vim'
 
 # exportando path
-export PATH="$HOME/.dotfiles/scripts:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/:/usr/local/games:$PATH"
+export PATH="$HOME/.dotfiles/scripts:/usr/local/sbin:/usr/local/bin :/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/:/usr/local/games:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
 # definindo PROMPT da direita -- eu acho
@@ -45,17 +38,24 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # LANG env
+export LC_COLLATE=pt_BR.UTF-8
+export LC_CTYPE=pt_BR.UTF-8
+export LC_MESSAGES=pt_BR.UTF-8
+export LC_MONETARY=pt_BR.UTF-8
+export LC_NUMERIC=pt_BR.UTF-8
+export LC_TIME=pt_BR.UTF-8
+export LC_ALL=pt_BR.UTF-8
 export LANG=pt_BR.UTF-8
+export LANGUAGE=pt_BR.UTF-8
+export LESSCHARSET=utf-8
 
 # PowerLevel9k configs
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_DELIMITER='*'
+#POWERLEVEL9K_MODE='awesome-fontconfig'
+#POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+#POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
+#POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+#POWERLEVEL9K_SHORTEN_DELIMITER='*'
+#
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
-
-# programs Variables
-DIANA_SECRET_TOKEN='nV-SNuYxdrwmMWYboMvbIcidko_GMvMS'

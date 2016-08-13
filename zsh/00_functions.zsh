@@ -14,4 +14,3 @@ fpath+=(`dirname $0`/completion)
 # load generate completion folder
 fpath+=(`dirname $0`/gen-completion)
 
-PATH=$PATH:$HOME/.dotfiles/scripts

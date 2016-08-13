@@ -1,17 +1,13 @@
+# autocompletion system
+autoload -U ~/.dotfiles/zsh/completion/*(:t)
 # ignore completion to commands we don't have
 zstyle ':completion:*:functions'          ignored-patterns '_*'
 
 # format autocompletion style
-#zstyle ':completion:*:descriptions'       format "%{$c1%}%d%{$reset_color%}"
-#zstyle ':completion:*:corrections'        format "%{$c3%}%d%{$reset_color%}"
-#zstyle ':completion:*:messages'           format "%{$c1%}%d%{$reset_color%}"
-#zstyle ':completion:*:warnings'           format "%{$c1%}%d%{$reset_color%}"
-
-
-# zstyle kill menu
-zstyle ':completion:*:*:kill:*'           menu yes select
-zstyle ':completion:*:kill:*'             force-list always
-zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
+zstyle ':completion:*:descriptions'       format "%{$c1%}%d%{$reset_color%}"
+zstyle ':completion:*:corrections'        format "%{$c3%}%d%{$reset_color%}"
+zstyle ':completion:*:messages'           format "%{$c1%}%d%{$reset_color%}"
+zstyle ':completion:*:warnings'           format "%{$c1%}%d%{$reset_color%}"
 
 ## VCS
 # vcs_info
@@ -27,8 +23,7 @@ zstyle ':vcs_info:*' formats              "${FMT_BRANCH}"              "${FMT_PA
 zstyle ':vcs_info:*' nvcsformats          ""                           "%~"
 
 
-zstyle ':completion:*' 			     rehash true # Persistent Rehash
-
+zstyle ':completion:*' 		         	     rehash true # Persistent Rehash
 zstyle ':completion:*'                       accept-exact '*(N)'
 zstyle ':completion:*'                       match-list 'm:{A-Z}={a-z}'
 zstyle ':completion:*'                       separate-sections 'yes'
@@ -39,35 +34,21 @@ zstyle ':completion:*'                       menu select yes
 zstyle ':completion:*'                       use-perl=1
 #zstyle ':completion:*'                       my-accounts='m@japh.se'
 zstyle ':completion:*'                       squeeze-slashes true
+zstyle ':completion:*'                       group-name ''
 zstyle ':completion:*:cd:*'                  ignore-parents parent pwd
 #zstyle ':completion:*:cd:*'                  tag-order 'named-directories'
 
 zstyle ':completion:*:(all-|)files'          ignored-patterns '*.un~'
-zstyle ':completion:*:*:kill:*:processes'    list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 zstyle ':completion::*'             	     use-cache on
 zstyle ':completion::*'   		     cache-path ~/.cache/zsh
-zstyle ':completion:*:processes'             command 'ps -axw'
-zstyle ':completion:*:processes-names'       command 'ps -awxho command'
+#zstyle ':completion:*:processes'             command 'ps -axw'
+#zstyle ':completion:*:processes-names'       command 'ps -awxho command'
 zstyle ':completion:*'                       matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:functions'             ignored-patterns '_*'
 
 zstyle ':completion:*:ls:*'                  ignore-line yes
 
-zstyle ':completion:*'                       group-name ''
-zstyle ':completion:*:*:mplayer:*'           tag-order files
-zstyle ':completion:*:*:mplayer:*'           file-patterns   \
-       '*.(rmvb|mkv|mpg|wmv|mpeg|avi|flv|mp3|mp4|flac|ogg):video' \
-       '*:all-files' '*(-/):directories'
-
-zstyle ':completion:*:*:(vim|rview|vimdiff|xxd):*:*files' \
-  ignored-patterns '*~|*.(old|bak|zwc|viminfo|rxvt-*|zcompdump)|pm_to_blib|cover_db|blib' \
-  file-sort modification
-zstyle ':completion:*:*:(vim|rview|vimdiff|xxd):*' \
-  file-sort modification
-zstyle ':completion:*:*:(vim|rview|vimdiff|xxd):*' \
-  tag-order files
-#zstyle ':completion:*:vim:*:directories' ignored-patterns \*
 
 zstyle ':completion:*:*:(scp):*' \
   file-sort modification
@@ -80,13 +61,20 @@ zstyle ':completion:*:*:(cd):*'        completer _history
 zstyle ':completion:*:*:perl:*'        file-patterns '*'
 
 
+# zstyle kill menu
+zstyle ':completion:*:*:kill:*'           menu yes select
+zstyle ':completion:*:kill:*'             force-list always
+zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+zstyle ':completion:*:*:killall:*' menu yes select
+zstyle ':completion:*:killall:*' force-list always
+zstyle ':completion:*:*:killall:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
+
 zstyle ':completion:*:descriptions' \
   format $'%{- \e[38;5;137;1m\e[48;5;234m%}%B%d%b%{\e[m%}'
 zstyle ':completion:*:warnings' \
   format $'%{No match for \e[38;5;240;1m%}%d%{\e[m%}'
-
-zstyle ':completion:*:*:apvlv:*'          tag-order files
-zstyle ':completion:*:*:apvlv:*'          file-patterns '*.pdf'
 
 zstyle ':completion:most-accessed-file:*' match-original both
 zstyle ':completion:most-accessed-file:*' file-sort access
