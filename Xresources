@@ -64,6 +64,14 @@ rofi.bw:                0
 !rofi.pid: $HOME/.cache/rofi.pid
 ! Disable history in run/ssh
 rofi.disable-history: false
+! Enabled modi
+rofi.modi:              window,run,ssh
+! Terminal to use
+rofi.terminal:                       rofi-sensible-terminal
+! Ssh client to use
+rofi.ssh-client:                     ssh
+! Ssh command to execute
+rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
 
 !=== ColorScheme
 !
