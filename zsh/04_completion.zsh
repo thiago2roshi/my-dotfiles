@@ -121,3 +121,10 @@ zstyle ':urlglobber' url-other-schema ftp git gopher http https magnet
 zstyle ':url-quote-magic:*' url-metas '*?[]^(|)~#='  # dropped { }
 zle -N self-insert url-quote-magic
 
+##
+# TaskWarrior completion
+zstyle ':completion:*:*:task:*' verbose yes
+zstyle ':completion:*:*:task:*:descriptions' format '%U%B%d%b%u'
+zstyle ':completion:*:*:task:*' group-name ''
+
+
