@@ -1,5 +1,14 @@
 # autocompletion system
 autoload -U ~/.dotfiles/zsh/completion/*(:t)
+
+# some _compdef 
+# using _gnu_generec for --help of commands if not exist a "_completion" file
+compdef _gnu_generic  ip iw
+compdef _gnu_generic  ssh grep
+compdef _gnu_generic  make
+compdef _vim          nvim
+
+
 # ignore completion to commands we don't have
 zstyle ':completion:*:functions'          ignored-patterns '_*'
 
