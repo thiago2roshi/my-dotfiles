@@ -7,7 +7,9 @@ $LAST_UPDATE =
 
 RSS_START ()
 {
-    
+    rsstail \
+        --newer $LAST_UPDATE
+        --format
 }
 
 # validated if rsstail is installed
