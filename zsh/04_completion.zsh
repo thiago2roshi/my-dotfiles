@@ -3,6 +3,9 @@ autoload -U ~/.dotfiles/zsh/completion/*(:t)
 # ignore completion to commands we don't have
 zstyle ':completion:*:functions'          ignored-patterns '_*'
 
+# Caching files
+zstyle ':completion:*'                    use-cache on
+zstyle ':completion:*'   		              cache-path ~/.cache/zsh
 # format autocompletion style
 zstyle ':completion:*:descriptions'       format "%{$c1%}%d%{$reset_color%}"
 zstyle ':completion:*:corrections'        format "%{$c3%}%d%{$reset_color%}"
@@ -12,7 +15,6 @@ zstyle ':completion:*:warnings'           format "%{$c1%}%d%{$reset_color%}"
 ## VCS
 # vcs_info
 zstyle ':vcs_info:*'                      enable git hg svn
-
 # check-for-changes can be really slow.
 # you should disable it, if you work with large repositories
 zstyle ':vcs_info:*' check-for-changes    true
@@ -23,31 +25,28 @@ zstyle ':vcs_info:*' formats              "${FMT_BRANCH}"              "${FMT_PA
 zstyle ':vcs_info:*' nvcsformats          ""                           "%~"
 
 
-zstyle ':completion:*' 		         	     rehash true # Persistent Rehash
+zstyle ':completion:*' 		         	         rehash true # Persistent Rehash
 zstyle ':completion:*'                       accept-exact '*(N)'
 zstyle ':completion:*'                       match-list 'm:{A-Z}={a-z}'
 zstyle ':completion:*'                       separate-sections 'yes'
 zstyle ':completion:*'                       list-dirs-first true
 zstyle ':completion:*:default'               list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*'                       menu select=2 eval "$(dircolors -b)"
-zstyle ':completion:*'                       menu select yes
+zstyle ':completion:*'                       menu yes select
 zstyle ':completion:*'                       use-perl=1
-#zstyle ':completion:*'                       my-accounts='m@japh.se'
 zstyle ':completion:*'                       squeeze-slashes true
 zstyle ':completion:*'                       group-name ''
 zstyle ':completion:*:cd:*'                  ignore-parents parent pwd
-#zstyle ':completion:*:cd:*'                  tag-order 'named-directories'
 
 zstyle ':completion:*:(all-|)files'          ignored-patterns '*.un~'
 
-zstyle ':completion::*'             	     use-cache on
-zstyle ':completion::*'   		     cache-path ~/.cache/zsh
 #zstyle ':completion:*:processes'             command 'ps -axw'
 #zstyle ':completion:*:processes-names'       command 'ps -awxho command'
 zstyle ':completion:*'                       matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:functions'             ignored-patterns '_*'
 
-zstyle ':completion:*:ls:*'                  ignore-line yes
+zstyle ':completion:*:(ls|mv|cp|rm|kill|diff):*' \
+  ignore-line yes
 
 
 zstyle ':completion:*:*:(scp):*' \
@@ -55,20 +54,18 @@ zstyle ':completion:*:*:(scp):*' \
 
 zstyle ':completion:*:*:(cd):*:*files' ignored-patterns '*~' file-sort access
 zstyle ':completion:*:*:(cd):*'        file-sort access
-zstyle ':completion:*:*:(cd):*'        menu select
+zstyle ':completion:*:*:(cd):*'        menu yes select
 zstyle ':completion:*:*:(cd):*'        completer _history
 
 zstyle ':completion:*:*:perl:*'        file-patterns '*'
 
-
 # zstyle kill menu
-zstyle ':completion:*:*:kill:*'           menu yes select
-zstyle ':completion:*:kill:*'             force-list always
-zstyle ':completion:*:*:kill:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-
-zstyle ':completion:*:*:killall:*' menu yes select
-zstyle ':completion:*:killall:*' force-list always
+zstyle ':completion:*:*:kill:*'              menu yes select
+zstyle ':completion:*:kill:*'                force-list always
+zstyle ':completion:*:*:kill:*:processes'    list-colors "=(#b) #([0-9]#)*=36=31"
+zstyle ':completion:*:kill:*'                command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+zstyle ':completion:*:*:killall:*'           menu yes select
+zstyle ':completion:*:killall:*'             force-list always
 zstyle ':completion:*:*:killall:*:processes' list-colors "=(#b) #([0-9]#)*=36=31"
 
 zstyle ':completion:*:descriptions' \
