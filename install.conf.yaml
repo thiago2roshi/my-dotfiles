@@ -24,4 +24,5 @@
     ~/.offlineimaprc:        config/mail/offlineimaprc
     ~/.config/neofetch:      config/neofetch
     ~/.tmux.conf:            config/tmux/config
+    ~/.config/sxhkd:         config/sxhkd
     /usr/lib/python3.5/site-packages/pygments/styles/sourcerer.py: config/pygments/sourcerer.py

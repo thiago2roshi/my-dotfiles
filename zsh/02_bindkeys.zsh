@@ -13,8 +13,8 @@ key[Left]=${terminfo[kcub1]}
 key[Right]=${terminfo[kcuf1]}
 key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
-key[CtrlLeft]="${terminfo[kLFT]}"
-key[CtrlRight]="${terminfo[kRIT]}"
+key[CtrlLeft]='^[[5D'
+key[CtrlRight]='^[[5C'
 
 # setup key accordingly
 [[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"      beginning-of-line
@@ -29,8 +29,8 @@ key[CtrlRight]="${terminfo[kRIT]}"
 [[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"      backward-char
 [[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"     forward-char
 
-[[ -n "${key[CtrlLeft]}" ]] && bindkey  "${key[CtrlLeft]}"  backward-word
-[[ -n "${key[Ctrlight]}" ]] && bindkey  "${key[CtrlRight]}" forward-word
+[[ -n "${key[CtrlLeft]}" ]] && bindkey  "${key[CtrlLeft]}"  emacs-backward-word
+[[ -n "${key[CtrlRight]}" ]] && bindkey "${key[CtrlRight]}" emacs-forward-word
 
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.

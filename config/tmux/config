@@ -16,8 +16,8 @@
 
 # change prefix to backtick
 unbind C-b
-set-option -g prefix `
-bind ` send-prefix
+set-option -g prefix "'"
+bind "'" send-prefix
 
 # shell
 set -g default-command /usr/bin/zsh
@@ -104,7 +104,7 @@ setw -g window-status-current-format "#[bg=colour66,fg=colour0,noreverse]█▓�
 # info on right
 set -g status-right-length 100
 set -g status-right ''
-set -g status-right '#(~/bin/tmux-status)'
+set -g status-right '#(~/.dotfiles/config/tmux/tmux-status)'
 # info on left (no session display)
 set -g status-left ''
 

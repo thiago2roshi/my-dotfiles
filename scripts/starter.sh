@@ -1,15 +1,17 @@
 #!/bin/sh
 ##
-# validate network on
-sudo dhcpcd wlp0s18f2u4 
 # programas para rodar no pos-boot do sistema
+
+# sxhkd : keybinds 
+[[ -z $(pgrep -xU $UID sxhkd)       ]] && sxhkd &
+
 # subindo mpd
-killall mpd ; mpd ~/.config/mpd/mpd.conf
-mpd play
+[[ -z $(pgrep -xU $UID mpd )        ]] && mpd ~/.config/mpd/mpd.conf && sleep 1 && mpd play
+[[ -z $(pgrep -xU $UID mpdscribble) ]] && mpdscribble 
+
 # subindo conky
-conky -d -c /home/thiago/.config/conky/conky.conf
-# albert -> hotkey <Ctrl>+<space>
-#albert
-# redshift -> coloração da tela
-#redshift
-# espaco para o irei adicionar depois
+[[ -z $(pgrep -xU $UID conky)       ]] && source $HOME/.dotfiles/scripts/conky.sh || echo "fail to load conky_starter"
+
+# validate network on
+#sudo dhcpcd wlp0s18f2u4 
+

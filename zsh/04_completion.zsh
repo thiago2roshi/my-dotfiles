@@ -1,5 +1,8 @@
 # autocompletion system
 autoload -U ~/.dotfiles/zsh/completion/*(:t)
+autoload -U ~/.dotfiles/zsh/gen-completion/*(:t)
+autoload -U ~/.dotfiles/zsh/plugins/zsh-completions/src/*(:t)
+
 # ignore completion to commands we don't have
 zstyle ':completion:*:functions'          ignored-patterns '_*'
 
@@ -120,4 +123,3 @@ autoload -U url-quote-magic
 zstyle ':urlglobber' url-other-schema ftp git gopher http https magnet
 zstyle ':url-quote-magic:*' url-metas '*?[]^(|)~#='  # dropped { }
 zle -N self-insert url-quote-magic
-

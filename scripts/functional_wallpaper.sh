@@ -1,6 +1,6 @@
 #!/bin/bash
 # author: bronx_warrior
-# https://www.reddit.com/r/unixporn/comments/3xen3g/bspwm_functional_wallpaper/
+# https://www.reddit.com/r/unixporn/comments/3xen3g/bspwm_functional_WALLPAPER/
 
 # returns value between 0 and 100.
 function query_vol {
@@ -16,9 +16,9 @@ function query_mute {
 	fi
 }
 
-#wallpaper=/tmp/wallpaper_ambience/wallpaper
-wallpaper="$(gsettings get org.gnome.desktop.background picture-uri | sed "s/'//g" | sed "s/^.//")"
-CONVERTED=$wallpaper
+#WALLPAPER=/tmp/wallpaper_ambience/wallpaper
+WALLPAPER=$(gsettings get org.gnome.desktop.background picture-uri | sed "s/'//g" | sed "s/file:\/\///")
+CONVERTED=$WALLPAPER
 vol=$(query_vol)
 
 # create the file path
@@ -39,15 +39,15 @@ vpn=false
 # create the file, if it isn't cached
 if [[ ! -f $CONVERTED ]]; then
 	if [[ $mute == true ]]; then
-		convert $wallpaper -fill navyblue -colorize 60 $CONVERTED
-		convert $CONVERTED -fill black -colorize 50 $converted
+		convert $WALLPAPER -fill navyblue -colorize 60 $CONVERTED
+		convert $CONVERTED -fill black -colorize 50 $CONVERTED
 	else
-		convert $wallpaper -fill blue -colorize $(((100 - vol) / 2)) $CONVERTED
-		convert $CONVERTED -fill black -colorize $(((100 - vol) / 2)) $converted
+		convert $WALLPAPER -fill blue -colorize $(((100 - vol) / 2)) $CONVERTED
+		convert $CONVERTED -fill black -colorize $(((100 - vol) / 2)) $CONVERTED
 	fi
 
 	if [[ $vpn == false ]]; then
-		convert $CONVERTED -fill red -colorize 50 $converted
+		convert $CONVERTED -fill red -colorize 50 $CONVERTED
 	fi
 
 fi

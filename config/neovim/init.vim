@@ -46,7 +46,9 @@ set t_Co=256                   " This is may or may not needed.
 set background=dark            " dark-mode gruvbox
 set noswapfile                 " No annoying swap files
 set autochdir                  " Auto change dir to file directory
+set autoindent                 " Auto indent
 set backspace=indent,eol,start " backspace intuitive
+set cursorline                 " highlight line
 set ignorecase                 " ignore case sensitive
 set number                     " show line numbers
 set title                      " Title Bar
@@ -83,7 +85,7 @@ let g:airline_powerline_fonts=1 " vim-airline com pwrLine font
 let g:python_host_skip_check= 1
 let g:loaded_python_provider = 1
 let g:loaded_python3_provider = 1
-" save fold (dobras)
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
-" ##### }}}
+" fold/dobras
+set foldlevelstart=200
+set foldlevel=200 
+"##### }}}
