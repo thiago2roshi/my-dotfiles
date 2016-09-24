@@ -3,7 +3,7 @@ set mailcap_path= '/home/thiago/.config/mutt/mailcap'
 set my_name="Thiago'roshi' Souza" 
 set realname="Thiago Souza" 
 set my_user=mutenroshi930@gmail.com 
-set my_pass='admjlnatgwrnajuc' 
+
 set from='mutenroshi930@gmail.com' 
 
 # Autenticacao no servidor smtp de email, nesse caso do gmail.com 

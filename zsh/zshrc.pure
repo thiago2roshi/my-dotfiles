@@ -21,6 +21,8 @@ zmodload zsh/terminfo
 ##
 setopt auto_cd         # if command is a path, cd into it
 setopt extended_glob   # activate complex pattern globbing
+setopt extendedglob    # 
+
 setopt prompt_subst    # Turn on command substitution in the prompt (and parameter expansion and arithmetic expansion).
 setopt correct         # try to correct spelling of commands
 unsetopt beep          # no bell on error

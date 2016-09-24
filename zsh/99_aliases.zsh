@@ -28,9 +28,9 @@ alias mkdir='mkdir -p -v'
 alias reload='source ~/.zshrc'
 alias help=run-help                           # active helper in zsh
 alias 'jobs'='jobs -l || echo "no running jobs"'
-# it's time for global things
-alias -g ':L'='| color-less'
-alias -g ':G'='| grep'
+# Global aliases dropped for using VIM Abreviations "plugin"
+#alias -g ':L'='| color-less'
+#alias -g ':G'='| grep'
 
 # Aria2 its so cool, but need a work
 alias download='aria2c --conf-path=$HOME/.config/aria2/aria2.conf'

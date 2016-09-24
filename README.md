@@ -1,7 +1,7 @@
 ## @thiagoroshi :suspect: dotfiles
 dotfiles for all my (desk|lap)tops
 
-Using zsh with zplug for plugin manager ~~goodbye OMZ~~. Bash unique for accidents or other machines (servers rPi)
+Using zsh pure, with some inspirations for others dotfiles. Bash unique for accidents or other machines (servers rPi)
 dotfiles symlinks organized by [dotbot](https://github.com/anishathalye/dotbot) and future GNU Stow if learn who using that.
 
 ### CLI apps
@@ -9,6 +9,9 @@ dotfiles symlinks organized by [dotbot](https://github.com/anishathalye/dotbot) 
 - nVim - ViM is good, but neoViM is better
 - ranger - with w3m images in terminal... oh god...
 - git
+- neofetch - cool printscreen for /r/unixporn
+- Tmux - for future
+- pygments - generic syntax highlighter
 
 ### GUI apps
 - Conky - is cli info for my GUI
