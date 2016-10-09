@@ -6,7 +6,7 @@ autoload -U ~/.dotfiles/zsh/plugins/zsh-completions/src/*(:t)
 # some _compdef 
 # using _gnu_generec for --help of commands if not exist a "_completion" file
 compdef _gnu_generic  ip iw
-compdef _gnu_generic  ssh grep
+compdef _gnu_generic  grep
 compdef _gnu_generic  make
 compdef _vim          nvim
 

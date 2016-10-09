@@ -49,6 +49,3 @@ export LANG=pt_BR.UTF-8
 export LANGUAGE=pt_BR.UTF-8
 export LESSCHARSET=utf-8
 
-# cool grep colored output
-export GREP_OPTIONS="--color=always"
-export GREP_COLORS="ms=01;37:mc=01;37:sl=:cx=01;30:fn=35:ln=32:bn=32:se=36"

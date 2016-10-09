@@ -5,6 +5,6 @@
 ICON=$HOME/Imagens/Lock-icon.png
 TMPBG=/tmp/screen.png
 scrot /tmp/screen.png
-convert $TMPBG -scale 8% -scale 1250% $TMPBG
+convert $TMPBG -scale 10% -scale 1000% -compress none $TMPBG
 convert $TMPBG $ICON -gravity center -composite -matte $TMPBG
 i3lock -n -i $TMPBG -c 000000 -e

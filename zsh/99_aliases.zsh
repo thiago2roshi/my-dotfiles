@@ -43,7 +43,6 @@ alias ~='cd ~'
 
 # I dont need remember filetype-program
 # USE-> # "file.txt" equals # "nvim file.txt"
-alias -s txt="nvim"  
 alias -s mkv="mpv"
 alias -s html="w3m"
 

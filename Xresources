@@ -14,6 +14,7 @@ Xft.lcdfilter: lcddefault
 xterm*termName: xterm-256color
 XTerm*metaSendsEscape: true
 xterm*utf8: 3
+xterm*geometry: 140x38
 
 !=== URxvt Config
 
@@ -65,14 +66,14 @@ rofi.bw:                0
 ! Disable history in run/ssh
 rofi.disable-history: false
 ! Enabled modi
-rofi.modi:              window,run,ssh
+rofi.modi:            window,run,ssh,fileBrowser
 ! Terminal to use
-rofi.terminal:                       rofi-sensible-terminal
+rofi.terminal:        rofi-sensible-terminal
 ! Ssh client to use
-rofi.ssh-client:                     ssh
+rofi.ssh-client:      ssh
 ! Ssh command to execute
-rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
-
+rofi.ssh-command:     {terminal} -e {ssh-client} {host}
+rofi.fileBrowser-command:     $HOME/.dotfiles/config/rofi/rofi-file-brownser.sh
 !=== ColorScheme
 !
 ! special
