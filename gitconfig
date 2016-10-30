@@ -1,7 +1,7 @@
 [user]
 	email = ads.thiagosouza@gmail.com
 	name = thiago2roshi
-	signingkey = 8A9DB38F
+	signingkey = 0x34F94FE841C91F48
 [push]
 	default = simple
 [core]

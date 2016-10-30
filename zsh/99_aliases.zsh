@@ -68,6 +68,7 @@ alias rsync-synchronize="rsync -avzu --delete --progress -h"
 alias mutt='mutt -F ~/.config/mutt/muttrc'
 alias clima='curl http://wttr.in/SaoPaulo'
 alias docker='sudo docker'
+alias zeroNet='docker run -d -e "ENABLE_TOR=true" -v /tmp/zeroNet:/root/data -p 15441:15441 -p 127.0.0.1:43110:43110 nofish/zeronet'
 
 # other aliases
 alias dmesg='dmesg --color=always'

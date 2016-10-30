@@ -1,0 +1,44 @@
+#!/bin/bash
+# function for easy extract compress files
+# tranks nixers for ideia (and code)
+if [ -f $1 && -f $2 ] ; then
+    case $1 in
+        e)
+            case $2 in
+                *.tar.bz2)   tar xjf $1   ;;
+                *.tar.gz)    tar xzf $1   ;;
+                *.bz2)       bunzip2 $1   ;;
+                *.rar)       unrar x $1   ;;
+                *.gz)        gunzip $1    ;;
+                *.tar)       tar xf $1    ;;
+                *.tbz2)      tar xjf $1   ;;
+                *.tgz)       tar xzf $1   ;;
+                *.zip)       unzip $1     ;;
+                *.Z)         uncompress $1;;
+                *.7z)        7z x $1      ;;
+                *help)       echo "usage: extract e <file.compact>" ;;
+                *)           echo "'$2' cannot be extracted via extract" ;;
+            esac
+        c)
+            case $2 in
+                *.tar.*)
+                    arch=$2
+                    shift 2
+                    tar cvf ${arch%.*} @$
+
+                    case $arch in
+                        *.gz)   gzip -9r ${arch%.*}   ;;
+                        *.bz2)  bzip2 -9zv ${arch%.*} ;;
+                    esac ;;
+
+                *.rar)  shift; rar a -m5 -r $@; rar k $1 ;;
+                *.zip)  shift; zip -9r $@                ;;
+                *.7z)   shift; 7z a -mx9 $@              ;;
+                *)      echo "Say WHAT???"               ;;
+            esac
+    esac
+else
+    echo "invalid option
+    usage: e file.zip   extract
+           c files.tar  compact"
+fi

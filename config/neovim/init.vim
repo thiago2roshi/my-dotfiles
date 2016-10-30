@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdtree'
 
 " colorscheme
 Plug 'morhetz/gruvbox'
+Plug 'w0ng/jellybeans-Xresources.vim'
 
 " status line para combinar com o powerline do zsh
 Plug 'vim-airline/vim-airline'
@@ -76,7 +77,7 @@ set directory=$HOME/.cache/vim//,. " Cache dir
 " ##### }}}
 
 " ##### Other things {{{
-colorscheme gruvbox   " colorscheme
+colorscheme jellybeans-Xresources   " colorscheme
 autocmd vimenter * NERDTree " open NERDTree automatic
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1 " vim-airline com pwrLine font
