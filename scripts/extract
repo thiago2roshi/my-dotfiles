@@ -1,7 +1,8 @@
 #!/bin/bash
 # function for easy extract compress files
 # tranks nixers for ideia (and code)
-if [[ -f $1 && -f $2 ]] ; then
+if [[ $# -eq 2 ]] ; then
+#if [[ -f $1 && -f $2 ]] ; then
     case $1 in
         e)
             case $2 in
@@ -36,9 +37,12 @@ if [[ -f $1 && -f $2 ]] ; then
                 *.7z)   shift; 7z a -mx9 $@              ;;
                 *)      echo "Say WHAT???"               ;;
             esac ;;
+        *) echo "invalid option
+           usage: e file.zip   extract
+                  c files.tar  compact"
     esac
 else
-    echo "invalid option
+    echo "need 2 arguments
     usage: e file.zip   extract
            c files.tar  compact"
 fi

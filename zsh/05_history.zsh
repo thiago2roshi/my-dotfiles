@@ -7,8 +7,8 @@
 
 # command history control
 export HISTFILE=$HOME/.zsh_history
-export HISTSIZE=10000
-export SAVEHIST=12000
+export HISTSIZE=100000
+export SAVEHIST=120000
 export HISTFILESIZE=$HISTSIZE
 export HISTCONTROL=ignoredups
 export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help"
