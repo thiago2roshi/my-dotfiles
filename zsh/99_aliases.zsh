@@ -23,11 +23,16 @@ alias mv='timeout 8 mv -iv'                   # limit potencial damage
 alias rm='timeout 3 rm -Iv --one-file-system' # limit potencial damage too
 alias df='df -h'                              # human readable
 alias du='du -h -d 2'                         # human readable to
-alias clr='clear'        
+alias cls='clear'
 alias mkdir='mkdir -p -v'
 alias reload='source ~/.zshrc'
 alias help=run-help                           # active helper in zsh
 alias 'jobs'='jobs -l || echo "no running jobs"'
+alias aur-update='yaourt -Syu --aur'
+alias hwinfo-cpu='grep "model name" /proc/cpuinfo'
+alias decoder_effect='nms'
+alias myip='dig TXT +short o-o.myaddr.l.google.com |sed "s/\"//g"'
+
 # Global aliases dropped for using VIM Abreviations "plugin"
 #alias -g ':L'='| color-less'
 #alias -g ':G'='| grep'
@@ -45,6 +50,8 @@ alias ~='cd ~'
 # USE-> # "file.txt" equals # "nvim file.txt"
 alias -s mkv="mpv"
 alias -s html="w3m"
+alias -s txt='nvim'
+alias -s md='nvim'
 
 # git needs aliases?
 alias ga='git add'
@@ -69,6 +76,25 @@ alias mutt='mutt -F ~/.config/mutt/muttrc'
 alias clima='curl http://wttr.in/SaoPaulo'
 alias docker='sudo docker'
 alias zeroNet='docker run -d -e "ENABLE_TOR=true" -v /tmp/zeroNet:/root/data -p 15441:15441 -p 127.0.0.1:43110:43110 nofish/zeronet'
+
+## Simple pacman aliases
+# from gist.github.com/netzverweigerer/0b3670e9b5e30cb71710
+alias pacman-upgrade="pacman -Syu"                 # Synchronize with repositories and then upgrade packages that are out of date on the local system.
+alias pacman-download="pacman -Sw"                 # Download specified package(s) as .tar.xz ball
+alias pacman-install="pacman -S"                   # Install specific package(s) from the repositories
+alias pacman-install-file="pacman -U"              # Install specific package not from the repositories but from a file
+alias pacman-remove="pacman -R"                    # Remove the specified package(s), retaining its configuration(s) and required dependencies
+alias pacman-purge="pacman -Rns"                   # Remove the specified package(s), its configuration(s) and unneeded dependencies
+alias pacman-repoinfo="pacman -Si"                 # Display information about a given package in the repositories
+alias pacman-search="pacman -Ss"                   # Search for package(s) in the repositories
+alias pacman-dbinfo="pacman -Qi"                   # Display information about a given package in the local database
+alias pacman-dbsearch="pacman -Qs"                 # Search for package(s) in the local database
+alias pacman-list-orphaned="pacman -Qdt"           # List all packages which are orphaned
+alias pacman-clean-cache="pacman -Scc"             # Clean cache - delete all the package files in the cache
+alias pacman-list-package-files="pacman -Ql"       # List all files installed by a given package
+alias pacman-provides-="pacman -Qo"                # Show package(s) owning the specified file(s)
+alias pacman-force-installed="pacman -D --asexp"   # Mark one or more installed packages as explicitly installed
+alias pacman-force-uninstalled="pacman -D --asdep" # Mark one or more installed packages as non explicitly installed
 
 # other aliases
 alias dmesg='dmesg --color=always'
