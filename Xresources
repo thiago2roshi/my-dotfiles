@@ -1,38 +1,5 @@
-!!!!!!!!!!!!!!!!!!!!!!!
-!==== colorscheme ====!
-!!!!!!!!!!!!!!!!!!!!!!!
+!=== Simple things
 
-! special
-*.foreground:   #e0d9d4
-*.background:   #1b1e18
-*.cursorColor:  #e0d9d4
-! black
-*.color0:       #32303b
-*.color8:       #c2ae9e
-! red
-*.color1:       #e62e2e
-*.color9:       #e71d1d
-! green
-*.color2:       #b0c843
-*.color10:      #8d6b13
-! yellow
-*.color3:       #ec9b50
-*.color11:      #e6c030
-! blue
-*.color4:       #90a0e1
-*.color12:      #ab99d2
-! magenta
-*.color5:       #c62675
-*.color13:      #d23ab9
-! cyan
-*.color6:       #6cbcb5
-*.color14:      #62b9c3
-! white
-*.color7:       #b6713b
-*.color15:      #c2ae62
-
-!==============
-!
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -41,71 +8,17 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*font:     xft:Hack:style=Regular:size=10,xft:Fira\ Mono\ for\ Powerline:size=10
+!*font:     xft:Hack:style=Regular:size=10
+*font:     xft:Fira Mono for Powerline:size=10
 *boldFont: xft:Hack:style=Regular:size=10
 *letterSpace: -1
-!=== Xterm Config
 
-xterm*termName: xterm-256color
-XTerm*metaSendsEscape: true
-xterm*utf8: 3
-xterm*geometry: 140x38
+!=== colorScheme
+#include ".config/Xresources.d/d1.color"
+!#include ".config/Xresources.d/test.color"
 
-!=== URxvt Config
-
-URxvt*utf8:      3
-URxvt*geometry:  96x30
-URxvt.antialias: true
-URxvt*termName:  rxvt-unicode-256color
-
-! do not scroll with output
-URxvt*scrollTtyOutput: false
-
-! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
-URxvt*scrollWithBuffer: true
-
-! scroll back to the bottom on keypress
-URxvt*scrollTtyKeypress: true
-
-! for LESS use
-URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
-URxvt.secondaryWheel: 1
+!=== xterm Config
+#include ".config/Xresources.d/xterm.xresources"
 
 !=== Rofi
-!
-rofi.location:          0
-rofi.color-enabled:     true
-!                       'background', 'border'
-rofi.color-window:      argb:dc111111, argb:dc111111
-! State:                'bg',          'fg',   'bgalt',       'hlbg',        'hlfg'
-rofi.color-normal:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
-rofi.color-urgent:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
-rofi.color-active:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
-rofi.separator-style:   none
-rofi.fullscreen:        true
-rofi.padding:           250
-rofi.hide-scrollbar:    true
-rofi.line:              7
-rofi.line-margin:       2
-rofi.fake-transparency: false
-rofi.yoffset:           10
-rofi.xoffset:           0
-rofi.width:             1366
-rofi.opacity:           80
-rofi.font:              Hack 16
-rofi.bw:                0
-
-! Pidfile location
-!rofi.pid: $HOME/.cache/rofi.pid
-! Disable history in run/ssh
-rofi.disable-history: false
-! Enabled modi
-rofi.modi:            window,run,ssh,fileBrowser
-! Terminal to use
-rofi.terminal:        rofi-sensible-terminal
-! Ssh client to use
-rofi.ssh-client:      ssh
-! Ssh command to execute
-rofi.ssh-command:     {terminal} -e {ssh-client} {host}
-rofi.fileBrowser-command:     $HOME/.dotfiles/config/rofi/rofi-file-brownser.sh
+#include ".config/rofi/rofi.xresources"
