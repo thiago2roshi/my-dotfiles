@@ -70,5 +70,5 @@ ${color1}Home: ${color2}${alignr}${fs_free /home}
 ${color1}${fs_bar 4,220 /home}${offset -220}${color3}${execbar echo 0}${color}
 ${color1}Root: ${color2}${alignr}${fs_free /}
 ${color1}${fs_bar 4,220 /}${offset -220}${color3}${execbar echo 0}${color}
-${color1}Trash: ${color2}${alignr}${exec du -hs .local/share/Trash | cut -f 1}
+${color1}Trash: ${color2}${alignr}${exec du -hs ~/.local/share/Trash | cut -f 1}
 ]]

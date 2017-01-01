@@ -66,13 +66,13 @@ conky.config = {
 }
 
 conky.text = [[
-${color1}IP:  ${color2}${alignr}${execi 400 curl icanhazip.com}
-${color1}Lan: ${color2}${alignr}${addr wlp0s18f2u3}
+${color1}IP:  ${color2}${alignr}${execi 410 dig TXT +short o-o.myaddr.l.google.com | sed 's/"//g'}
+${color1}Lan: ${color2}${alignr}${addr wlp0s18f2u4}
 ${color1}SSID:${color2}${alignr}${wireless_essid}
 
-${color1}Up:${color2}${alignr}${upspeed wlp0s18f2u3}/s
-${color1}${upspeedgraph wlp0s18f2u3 20,220 668ABF}
+${color1}Up:${color2}${alignr}${upspeed wlp0s18f2u4}/s
+${color1}${upspeedgraph wlp0s18f2u4 20,220 668ABF}
 
-${color1}Down:${color2}${alignr}${downspeed wlp0s18f2u3}/s
-${color1}${downspeedgraph wlp0s18f2u3 20,220 668ABF}
+${color1}Down:${color2}${alignr}${downspeed wlp0s18f2u4}/s
+${color1}${downspeedgraph wlp0s18f2u4 20,220 668ABF}
 ]]

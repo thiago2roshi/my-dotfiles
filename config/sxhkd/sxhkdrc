@@ -1,8 +1,11 @@
 # MPD player
-XF86Audio{Play,Prev,Next}
-    mpc -q {toggle,prev,next}
+XF86Audio{Play,Prev,Next,Stop}
+    mpc -q {toggle,prev,next,stop}
 # LockScreen i3lock
 super + l
     i3lock.sh
+# Rofi Menu Launcher
 ctrl + space
+    rofi -show run
+super    
     rofi -show run
