@@ -2,10 +2,11 @@
 # @author @ThiagoRoshi
 # @gretting 'the internet'
 
-autoload -U colors   && colors
-autoload -U vcs_info && vcs_info
-autoload -Uz promptinit && promptinit
-autoload compinit && compinit
+autoload -U colors        && colors
+autoload -U vcs_info      && vcs_info
+autoload -Uz promptinit   && promptinit
+autoload compinit         && compinit
+autoload bashcompinit     && bashcompinit
 
 # Helper Command
 autoload -Uz run-help

@@ -1,0 +1,20 @@
+!=== xterm Config
+xterm*autohint:     true
+xterm*antialias:    true
+xterm*termName:     xterm-256color
+xterm*faceName:     xft:Fira Mono for Powerline
+xterm*faceSize:     10
+xterm*toolBar:      On
+xterm*saveLines:    10000
+xterm*geometry:     120x25
+xterm*xftAntialias: true
+xterm*metaSendsEscape:  true
+
+xterm*locale:           true
+xterm*utf8:             true
+xterm*utf8Title:        true
+xterm*.utf8Fonts:       always
+
+xterm*keysym.Home:      ^[OH 
+xterm*keysym.End:       ^[OE
+xterm*keysym.Delete:    ^[[3~

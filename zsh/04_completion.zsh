@@ -2,12 +2,13 @@
 autoload -U ~/.dotfiles/zsh/completion/*(:t)
 autoload -U ~/.dotfiles/zsh/gen-completion/*(:t)
 autoload -U ~/.dotfiles/zsh/plugins/zsh-completions/src/*(:t)
+autoload -U /usr/share/bash-completion/bash-completion
 
 # some _compdef 
 # using _gnu_generec for --help of commands if not exist a "_completion" file
-compdef _gnu_generic  ip iw
-compdef _gnu_generic  grep
-compdef _gnu_generic  make
+#compdef _gnu_generic  ip iw
+#compdef _gnu_generic  grep
+#compdef _gnu_generic  make
 compdef _vim          nvim
 
 # ignore completion to commands we don't have

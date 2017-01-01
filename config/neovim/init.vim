@@ -22,7 +22,7 @@ Plug 'mileszs/ack.vim'
 " Tabular use for VIM
 Plug 'godlygeek/tabular'
 
-Plug 'jistr/vim-nerdtree-tabs.git'
+Plug 'jistr/vim-nerdtree-tabs'
 
 "" Custom bundles
 "" PHP Bundle
@@ -78,9 +78,10 @@ set directory=$HOME/.cache/vim//,. " Cache dir
 
 " ##### Other things {{{
 colorscheme jellybeans-Xresources   " colorscheme
-autocmd vimenter * NERDTree " open NERDTree automatic
+"autocmd vimenter * NERDTree " open NERDTree automatic
 let g:airline_theme='gruvbox'
 let g:airline_powerline_fonts=1 " vim-airline com pwrLine font
+let g:nerdtree_tabs_open_on_console_startup=1
 "
 " Improve Neovim startup time by disabling python and host check
 let g:python_host_skip_check= 1

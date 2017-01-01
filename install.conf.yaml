@@ -9,18 +9,19 @@
     ~/.bashrc:      bash/bashrc_manjaro
     ~/.bash_logout: bash/bash_logout
     ~/.zshrc:       zsh/zshrc.pure
-    ~/.zshrc.local: zsh/zshrc.local
+#    ~/.zshrc.local: zsh/zshrc.local
     ~/.gitconfig:   gitconfig
     ~/.Xresources:  Xresources
     
-    ~/bash_script: scripts/
-    
+    ~/bin:                   scripts
+    ~/.config/Xresources.d:  config/Xresources.d
     ~/.config/nvim:          config/neovim
     ~/.config/mpd:           config/mpd
     ~/.config/terminator:    config/terminator
     ~/.config/mutt:          config/mail/mutt
     ~/.config/redshift.conf: config/redshift.conf
-    ~/.config/conky:         config/conky/
+    ~/.config/conky:         config/conky
+    ~/.config/rofi:          config/rofi
     ~/.offlineimaprc:        config/mail/offlineimaprc
     ~/.config/neofetch:      config/neofetch
     ~/.tmux.conf:            config/tmux/config

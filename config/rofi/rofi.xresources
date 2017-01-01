@@ -1,0 +1,37 @@
+!=== Rofi
+!
+rofi.location:          0
+rofi.color-enabled:     true
+!                       'background', 'border'
+rofi.color-window:      argb:dc111111, argb:dc111111
+! State:                'bg',          'fg',   'bgalt',       'hlbg',        'hlfg'
+rofi.color-normal:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.color-urgent:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.color-active:      argb:00333333, #ffffff, argb:00333333, argb:00333333, argb:ffefa211
+rofi.separator-style:   line
+rofi.fullscreen:        true
+rofi.padding:           200
+rofi.hide-scrollbar:    true
+rofi.line:              15
+rofi.line-margin:       2
+rofi.fake-transparency: false
+rofi.yoffset:           10
+rofi.xoffset:           0
+rofi.width:             1366
+rofi.opacity:           80
+rofi.font:              Noto Mono 16
+rofi.bw:                0
+
+! Pidfile location
+!rofi.pid: $HOME/.cache/rofi.pid
+! Disable history in run/ssh
+rofi.disable-history: false
+! Enabled modi
+rofi.modi:            window,run,ssh,fileBrowser:~/.dotfiles/config/rofi/rofi-file-brownser.sh
+! Terminal to use
+!rofi.terminal:        rofi-sensible-terminal
+! Ssh client to use
+rofi.ssh-client:      ssh
+! Ssh command to execute
+rofi.ssh-command:     {terminal} -e {ssh-client} {host}
+rofi.fileBrowser-command:     fileBrowser:$HOME/.dotfiles/config/rofi/rofi-file-brownser.sh

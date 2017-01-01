@@ -4,7 +4,7 @@
 ##
 
 # exibe taskWarrior in zsh start
- task
+# task
 
 export PAGER=${PAGER:-less}
 
@@ -44,8 +44,7 @@ export LC_MESSAGES=pt_BR.UTF-8
 export LC_MONETARY=pt_BR.UTF-8
 export LC_NUMERIC=pt_BR.UTF-8
 export LC_TIME=pt_BR.UTF-8
-export LC_ALL=pt_BR.UTF-8
 export LANG=pt_BR.UTF-8
 export LANGUAGE=pt_BR.UTF-8
 export LESSCHARSET=utf-8
-
+export LC_ALL=
