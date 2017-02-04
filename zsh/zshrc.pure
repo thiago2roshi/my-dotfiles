@@ -53,3 +53,10 @@ done
 
 # theme
 source $HOME/.dotfiles/zsh/2lines_prompt
+
+# Tmux is Live
+#tmux
+
+# exibe taskWarrior in zsh start
+# task
+

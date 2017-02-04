@@ -2,6 +2,12 @@
 # some more helpers aliases
 ################
 
+#█▓▒░ av aliases
+# Thanks Xero... again
+alias sec-rootkits-check="sudo rkhunter --update; sudo rkhunter --propupd; sudo rkhunter --check"
+alias sec-av-check="clamscan --recursive=yes --infected /home"
+alias sec-av-update="sudo freshclam"
+
 # ls aliases
 # using space in command for ignoring in history
 alias ls=' ls --tabsize=0 --literal --color=auto --show-control-chars --classify --human-readable --group-directories-first -X'
@@ -22,16 +28,17 @@ alias cp="cp -i"                              # confirm before overwriting somet
 alias mv='timeout 8 mv -iv'                   # limit potencial damage
 alias rm='timeout 3 rm -Iv --one-file-system' # limit potencial damage too
 alias df='df -h'                              # human readable
-alias du='du -h -d 2'                         # human readable to
+alias du='du -h'                              # human readable to
 alias cls='clear'
 alias mkdir='mkdir -p -v'
-alias reload='source ~/.zshrc'
+alias reload-zsh='source ~/.zshrc ; clear'
 alias help=run-help                           # active helper in zsh
 alias 'jobs'='jobs -l || echo "no running jobs"'
 alias aur-update='yaourt -Syu --aur'
 alias hwinfo-cpu='grep "model name" /proc/cpuinfo'
-alias decoder_effect='nms'
+alias decoder_effect='$1 | nms -a'
 alias myip='dig TXT +short o-o.myaddr.l.google.com |sed "s/\"//g"'
+alias duplicate_finder="/usr/bin/ls **/* -1 | tr '[A-Z]' '[a-z]' | sort | uniq -c | grep -v ' 1 '"
 
 # Global aliases dropped for using VIM Abreviations "plugin"
 #alias -g ':L'='| color-less'

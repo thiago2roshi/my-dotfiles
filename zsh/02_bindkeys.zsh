@@ -13,8 +13,8 @@ key[Left]=${terminfo[kcub1]}
 key[Right]=${terminfo[kcuf1]}
 key[PageUp]=${terminfo[kpp]}
 key[PageDown]=${terminfo[knp]}
-key[CtrlLeft]='^[[5D'
-key[CtrlRight]='^[[5C'
+key[CtrlLeft]='[1;5D'
+key[CtrlRight]='[1;5C'
 
 # setup key accordingly
 [[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"      beginning-of-line

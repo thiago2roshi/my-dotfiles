@@ -29,7 +29,7 @@ confirm_wrapper() {
 }
 
 # exemples 
-poweroff() { confirm_wrapper --root $0 "$@"; }
-reboot() { confirm_wrapper --root $0 "$@"; }
+poweroff()  { confirm_wrapper --root $0 "$@"; }
+reboot()    { confirm_wrapper --root $0 "$@"; }
 hibernate() { confirm_wrapper --root $0 "$@"; }
-
+shutdown()  { confirm_wrapper --root $0 "$@"; }

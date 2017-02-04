@@ -7,5 +7,4 @@ super + l
 # Rofi Menu Launcher
 ctrl + space
     rofi -show run
-super    
-    rofi -show run
+

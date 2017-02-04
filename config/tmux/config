@@ -14,10 +14,10 @@
 # ░▓▓▓▓▓▓▓▓▓▓
 # ░░░░░░░░░░
 
-# change prefix to backtick
+# change prefix to Ctrl-a (like in gnu-screen)
 unbind C-b
-set-option -g prefix "'"
-bind "'" send-prefix
+set-option -g prefix C-a
+bind-key C-a send-prefix
 
 # shell
 set -g default-command /usr/bin/zsh
@@ -54,6 +54,7 @@ setw -g mode-keys vi
 set -g status-keys vi
 
 # pleb mode
+#set -g mouse-utf8 on
 #set -g mouse on
 
 # splitting
@@ -63,7 +64,7 @@ unbind '"'
 bind v split-window -v
 
 # window switching
-# urxvt tab like window switching (-n: no prior escape seq)
+#urxvt tab like window switching (-n: no prior escape seq)
 bind-key -n S-left prev
 bind-key -n S-right next
 bind-key -n C-left swap-window -t -1
@@ -78,6 +79,7 @@ set -g pane-active-border-fg colour0
 #set -g pane-active-border-attr blink
 
 # status line
+#set -g status-utf8 on
 set -g status-justify left
 set -g status-bg colour0
 set -g status-fg colour66
@@ -89,11 +91,11 @@ set -g message-bg colour66
 set -g message-command-fg colour66
 set -g message-command-bg colour1
 
-# window mode
+#window mode
 setw -g mode-bg colour66
 setw -g mode-fg colour0
 
-# resizing
+#resizing
 setw -g aggressive-resize on
 
 # window status
@@ -101,11 +103,11 @@ set-option -g status-position bottom
 setw -g window-status-format "#[bg=colour241,fg=colour0,noreverse]█▓░ #W "
 setw -g window-status-current-format "#[bg=colour66,fg=colour0,noreverse]█▓░ #W "
 
-# info on right
+# Info on right
 set -g status-right-length 100
 set -g status-right ''
-set -g status-right '#(~/.dotfiles/config/tmux/tmux-status)'
-# info on left (no session display)
+set -g status-right '#(~/bin/tmux-status)'
+# Info on left (no session display)
 set -g status-left ''
 
 # loud or quiet?
@@ -122,6 +124,3 @@ set -g clock-mode-colour colour66
 bind x kill-pane
 bind X next-layout
 bind Z previous-layout
-
-# toggle status bar visibility
-bind t set status

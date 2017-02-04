@@ -3,9 +3,6 @@
 # @thiagoroshi
 ##
 
-# exibe taskWarrior in zsh start
-# task
-
 export PAGER=${PAGER:-less}
 
 # definindo usuario padrao
@@ -38,13 +35,13 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 # LANG env
-export LC_COLLATE=pt_BR.UTF-8
-export LC_CTYPE=pt_BR.UTF-8
-export LC_MESSAGES=pt_BR.UTF-8
-export LC_MONETARY=pt_BR.UTF-8
-export LC_NUMERIC=pt_BR.UTF-8
-export LC_TIME=pt_BR.UTF-8
 export LANG=pt_BR.UTF-8
-export LANGUAGE=pt_BR.UTF-8
-export LESSCHARSET=utf-8
+export LC_COLLATE=C
+export LC_CTYPE="pt_BR.UTF-8"
+export LC_MESSAGES="pt_BR.UTF-8"
+export LC_MONETARY="pt_BR.UTF-8"
+export LC_NUMERIC="pt_BR.UTF-8"
+export LC_TIME="pt_BR.UTF-8"
+export LANGUAGE="pt_BR.UTF-8"
+export LESSCHARSET="utf-8"
 export LC_ALL=

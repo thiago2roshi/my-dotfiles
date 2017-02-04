@@ -1,5 +1,9 @@
-!=== Simple things
+!=== colorScheme
+#include ".config/Xresources.d/d1.color"
+!#include ".config/Xresources.d/test.color"
 
+
+!=== Simple things
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -10,12 +14,8 @@ Xft.lcdfilter: lcddefault
 
 !*font:     xft:Hack:style=Regular:size=10
 *font:     xft:Fira Mono for Powerline:size=10
-*boldFont: xft:Hack:style=Regular:size=10
+*boldFont: xft:Fira Mono for Powerline:style=Bold:size=10
 *letterSpace: -1
-
-!=== colorScheme
-#include ".config/Xresources.d/d1.color"
-!#include ".config/Xresources.d/test.color"
 
 !=== xterm Config
 #include ".config/Xresources.d/xterm.xresources"

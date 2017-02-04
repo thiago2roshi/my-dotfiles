@@ -9,9 +9,9 @@
     ~/.bashrc:      bash/bashrc_manjaro
     ~/.bash_logout: bash/bash_logout
     ~/.zshrc:       zsh/zshrc.pure
-#    ~/.zshrc.local: zsh/zshrc.local
     ~/.gitconfig:   gitconfig
     ~/.Xresources:  Xresources
+    ~/.xinitrc:     xinitrc
     
     ~/bin:                   scripts
     ~/.config/Xresources.d:  config/Xresources.d
