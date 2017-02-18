@@ -43,7 +43,7 @@ zbell_noise() {
     local message="ZSH_NOTIFY - $HOST
     Command: $zbell_lastcmd completed
     exit status: $zbell_exit_status
-    Time: $zbell_cmd_duration"
+    Time: $(pretty_time $zbell_cmd_duration)"
     mpv \
       --no-audio-display \
       --really-quiet \
@@ -130,7 +130,7 @@ zbell_end() {
             "Job completed on $HOST:" \
             "Command ** $zbell_lastcmd completed **
         exit status: $zbell_exit_status 
-        Time: $zbell_cmd_duration"
+        Time: $(pretty_time $zbell_cmd_duration)"
     fi
 }
 
