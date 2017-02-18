@@ -25,7 +25,7 @@ autoload -Uz add-zsh-hook || return
 (( ${+zbell_duration_long} )) || zbell_duration_long=180
 
 # initialize zbell_ignore if not set
-(( ${+zbell_ignore} )) || zbell_ignore=($EDITOR $PAGER ls watch htop top ssh iotop dstat vmstat nano emacs vi vim nvim bwm-ng less more fdisk audacious play aplay sqlite3 wine mtr ping traceroute vlc mplayer ncmpcpp mpd mpv conky smplayer tail tmux screen man sawfish-config powertop g man run-help)
+(( ${+zbell_ignore} )) || zbell_ignore=($EDITOR $PAGER ls watch htop top ssh iotop dstat vmstat nano emacs vi vim nvim bwm-ng less more fdisk audacious play aplay sqlite3 wine mtr ping traceroute vlc mplayer ncmpcpp mpd mpv conky smplayer tail tmux screen man sawfish-config powertop g man run-help ranger w3m 'wifi.sh' 'wifi-menu')
 
 # initialize it because otherwise we compare a date and an empty string
 # the first time we see the prompt. it's fine to have lastcmd empty on the

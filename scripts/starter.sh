@@ -18,7 +18,8 @@ sleep 2s && mpd play &
 [[ -z $(pgrep -xU $UID thunar )     ]] && thunar --daemon &
 
 #Up WiFi
-netctl start wlp0s18f2u4-Rs && sleep 1s
+netctl start enp0s18f2u4-RS_G && sleep 1s
+#sudo wifi.sh connect RS_G "1597rafael" && sleep 1s
 
 # subindo conky
 sleep 10s
