@@ -20,7 +20,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-# utils commands
+# Expand commands
 alias less='less -r'
 alias more='less'
 alias free='free -m'                          # size in MB
@@ -31,6 +31,9 @@ alias df='df -h'                              # human readable
 alias du='du -h'                              # human readable to
 alias cls='clear'
 alias mkdir='mkdir -p -v'
+alias dmesg='dmesg --color=always'
+
+# utils commands
 alias reload-zsh='source ~/.zshrc ; clear'
 alias help=run-help                           # active helper in zsh
 alias 'jobs'='jobs -l || echo "no running jobs"'
@@ -38,6 +41,7 @@ alias aur-update='yaourt -Syu --aur'
 alias hwinfo-cpu='grep "model name" /proc/cpuinfo'
 alias decoder_effect='$1 | nms -a'
 alias myip='dig TXT +short o-o.myaddr.l.google.com |sed "s/\"//g"'
+alias fuzzy-search='fzf'
 alias duplicate_finder="/usr/bin/ls **/* -1 | tr '[A-Z]' '[a-z]' | sort | uniq -c | grep -v ' 1 '"
 
 # Global aliases dropped for using VIM Abreviations "plugin"
@@ -57,8 +61,8 @@ alias ~='cd ~'
 # USE-> # "file.txt" equals # "nvim file.txt"
 alias -s mkv="mpv"
 alias -s html="w3m"
-alias -s txt='nvim'
-alias -s md='nvim'
+alias -s txt='vim'
+alias -s md='mdless'
 
 # git needs aliases?
 alias ga='git add'
@@ -104,5 +108,4 @@ alias pacman-force-installed="pacman -D --asexp"   # Mark one or more installed 
 alias pacman-force-uninstalled="pacman -D --asdep" # Mark one or more installed packages as non explicitly installed
 
 # other aliases
-alias dmesg='dmesg --color=always'
 alias disks='echo "╓───── m o u n t . p o i n t s"; echo "╙────────────────────────────────────── ─ ─ "; lsblk -a; echo ""; echo "╓───── d i s k . u s a g e"; echo "╙────────────────────────────────────── ─ ─ "; df;' # cool echo df:

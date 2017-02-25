@@ -78,7 +78,7 @@ EOF
 
 zbell_external_notify() {
     if [[ -e $HOME/bin/telegram_msg.sh ]];then
-        telegram-cli -W -e "send_text Thiagoroshi /tmp/telegram_msg"
+        telegram-cli -W -e "send_text Thiagoroshi /tmp/telegram_msg" &
     else
         zbell_email
     fi
