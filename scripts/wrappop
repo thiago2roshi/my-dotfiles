@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# fifo that we'll use to feed the popups
+test -p /tmp/popup.fifo || mkfifo /tmp/popup.fifo
+test -d /tmp/popup.d || mkdir /tmp/popup.d
+
+w=190
+h=20
+x=1200
+y=10
+
+find_place() {
+    NUM=$(ls -1 /tmp/popup.d | wc -l)
+    for n in `seq 0 $NUM`; do
+        test ! -f /tmp/popup.d/$n && echo $n && return
+    done
+    echo $NUM
+}
+
+mkpop() {
+    local f=$1
+
+    touch /tmp/popup.d/$f
+    popup -g ${w}x${h}+${x}+$((y + (h+y) * f)) $f ${message}
+    rm /tmp/popup.d/$f
+}
+
+# get messages from the fifo
+tail -f /tmp/popup.fifo |
+while IFS= read -r message; do
+    mkpop $(find_place) &
+done
+

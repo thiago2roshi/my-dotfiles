@@ -1,0 +1,15 @@
+!{{{ Simple things
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+*font:     xft:myfont:size=myfontsize
+*boldFont: xft:myfont:style=Bold:size=myfontsize
+*letterSpace: -1
+!}}}
+
+

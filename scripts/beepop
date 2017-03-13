@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+# depends: lemonbar, wattr (wmutils) and common sense
+
+default_geometry() {
+    # get screen size
+    x=$(wattr w `lsw -r`)
+    y=$(wattr h `lsw -r`)
+
+    width=140
+    height=28
+
+    offy=44
+    offx=$(( x - $width - 25 ))
+
+    echo "${width}x${height}+${offx}+${offy}"
+}
+
+FIFO=/tmp/beepop.fifo
+GEOM=$(default_geometry)
+SLEEP=3
+CHAR="$(/usr/bin/printf '\uE054')"
+FG='#ffffffff'
+BG='#ffa24455' 
+
+
+case $(basename $0) in
+    beepop)
+        test -p $FIFO || mkfifo $FIFO
+
+        tail -f $FIFO | while read LINE; do
+#            . $HOME/.theme
+            (
+
+                echo "%{r}$LINE %{F${HL}}$CHAR"
+                sleep $SLEEP
+            ) | lemonbar -d -g "$GEOM" -f "$FONT" -f "$ICON" -B "$BG" -F "$FG"
+        done
+        ;;
+    popup)
+        echo "$*" > $FIFO
+        ;;
+esac
+

@@ -1,0 +1,36 @@
+/* special */
+#define myfg   #f9f8f2
+#define mybg   #272822
+#define mycursorColor  #f8f8f2
+
+/* black */
+#define mycolor0       #272822
+#define mycolor8       #75715e
+
+/* red */
+#define mycolor1       #f92672
+#define mycolor9       #f92672
+
+/* green*/
+#define mycolor2       #a6e22e
+#define mycolor10      #a6e22e
+
+/* yellow */
+#define mycolor3       #f4bf75
+#define mycolor11      #f4bf75
+
+/* blue */
+#define mycolor4       #66d9ef
+#define mycolor12      #66d9ef
+
+/* magenta */
+#define mycolor5       #ae81ff
+#define mycolor13      #ae81ff
+
+/* cyan */
+#define mycolor6       #a1efe4
+#define mycolor14      #a1efe4
+
+/* white */
+#define mycolor7       #f8f8f2
+#define mycolor15      #f9f8f5

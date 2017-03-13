@@ -2,15 +2,14 @@
 xterm*autohint:     true
 xterm*antialias:    true
 xterm*termName:     xterm-256color
-!xterm*faceName:     xft:Fira Mono for Powerline
-xterm*faceName:     Noto Mono
-xterm*faceNameDoublesize: Noto Sans Mono CJK JP
-xterm*faceSize:     10
+xterm*faceName:     myfont
+xterm*faceSize:     myfontsize
 xterm*toolBar:      On
 xterm*saveLines:    10000
-xterm*geometry:     120x25
+xterm*geometry:     mygeometry
 xterm*xftAntialias: true
 xterm*metaSendsEscape:  true
+xterm*faceNameDoublesize: myfontDouble
 
 xterm*locale:           true
 xterm*utf8:             2

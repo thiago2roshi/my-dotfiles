@@ -1,0 +1,7 @@
+usage: /home/thiago/bin/urnn [retrain|regen|refresh|colors] (file) (file)
+       retrain               retrain urnn with the current dataset
+       regen                 regenerate ALL urnn data from inputs (HEAVY operation)
+       refresh               repopulate urnn.data file from dataset(after an add, for example)
+       colors (img)          generate xresources to STDOUT using current training result
+       add (img) (Xres)      generate and add urnn data to current dataset(for quickly testing)
+       addinput (img) (Xres) generate and add urnn data to dataset, and add files to input/staging

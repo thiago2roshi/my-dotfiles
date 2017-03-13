@@ -1,0 +1,21 @@
+
+! hard contrast background #1d2021
+! soft contrast background #32302f
+#define mybg      #282828
+#define myfg      #ebdbb2
+#define mycolor0  #282828
+#define mycolor8  #928374
+#define mycolor1  #cc241d
+#define mycolor9  #fb4934
+#define mycolor2  #98971a
+#define mycolor10 #b8bb26
+#define mycolor3  #d79921
+#define mycolor11 #fabd2f
+#define mycolor4  #458588
+#define mycolor12 #83a598
+#define mycolor5  #b16286
+#define mycolor13 #d3869b
+#define mycolor6  #689d6a
+#define mycolor14 #8ec07c
+#define mycolor7  #a89984
+#define mycolor15 #ebdbb2

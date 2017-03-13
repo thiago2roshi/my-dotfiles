@@ -8,6 +8,11 @@ xrdb -merge ~/.Xresources &
 # sxhkd : keybinds 
 sxhkd &
 
+# Lemonbar and notification things
+# use: output message in /tmp/beepop.fifo and /tmp/popup.fifo
+beebop & 
+popup-overlay &
+
 # subindo mpd
 [[ -z $(pgrep -xU $UID mpd )        ]] && mpd ~/.config/mpd/mpd.conf &
 sleep 2s && mpd play &
@@ -18,13 +23,9 @@ sleep 2s && mpd play &
 [[ -z $(pgrep -xU $UID thunar )     ]] && thunar --daemon &
 
 #Up WiFi
-netctl start enp0s18f2u4-RS_G && sleep 1s
-#sudo wifi.sh connect RS_G "1597rafael" && sleep 1s
+#netctl start enp0s18f2u4-RS_G && sleep 1s
+pkexec wifi.sh connect RS_G "1597rafael" && sleep 1s
 
 # subindo conky
-sleep 10s
-[[ -z $(pgrep -xU $UID conky)       ]] && source $HOME/.dotfiles/scripts/conky.sh || echo "fail to load conky_starter"
-
-# validate network on
-#sudo dhcpcd wlp0s18f2u3 
-
+[[ -z $(pgrep -xU $UID conky)       ]] && conky \
+            -q -c $HOME/.dotfiles/config/conky/conky.conf &
