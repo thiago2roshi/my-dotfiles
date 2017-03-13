@@ -1,24 +1,58 @@
-!=== colorScheme
-#include ".config/Xresources.d/d1.color"
-!#include ".config/Xresources.d/test.color"
+!{{{ ColorScheme
+!#include ".config/Xresources.d/gruvbox.color"
 
+!urnn test scheme
+#include ".config/Xresources.d/mother3.color"
 
-!=== Simple things
-Xft.dpi: 96
-Xft.antialias: true
-Xft.hinting: true
-Xft.rgba: rgb
-Xft.autohint: false
-Xft.hintstyle: hintslight
-Xft.lcdfilter: lcddefault
+!==== Colors
+! special
+*.foreground:   myfg
+*.background:   mybg
+*.cursorColor:  mycursorColor
+! black
+*.color0:       mycolor0
+*.color8:       mycolor8
+! red
+*.color1:       mycolor1
+*.color9:       mycolor9
+! green
+*.color2:       mycolor2
+*.color10:      mycolor10
+! yellow
+*.color3:       mycolor3
+*.color11:      mycolor11
+! blue
+*.color4:       mycolor4
+*.color12:      mycolor12
+! magenta
+*.color5:       mycolor5
+*.color13:      mycolor13
+! cyan
+*.color6:       mycolor6
+*.color14:      mycolor14
+! white
+*.color7:       mycolor7
+*.color15:      mycolor15
+!}}} 
 
-!*font:     xft:Hack:style=Regular:size=10
-*font:     xft:Fira Mono for Powerline:size=10
-*boldFont: xft:Fira Mono for Powerline:style=Bold:size=10
-*letterSpace: -1
+!{{{ Simple things
+!#define myfont          Fira Mono for Powerline
+#define myfont          Noto Mono
+#define myfontDouble    Noto Sans Mono CJK JP
+#define myfontsize      10
+#define myfontsizebig   16
+#define mygeometry      120x25
 
-!=== xterm Config
+!}}}
+
+!{{{ Includes
+! Xterm Config
 #include ".config/Xresources.d/xterm.xresources"
 
-!=== Rofi
+! Rofi
 #include ".config/rofi/rofi.xresources"
+
+! Xst - simple terminal
+#include ".config/Xresources.d/xst.xresources"
+!}}}
+
