@@ -44,6 +44,12 @@ alias myip='dig TXT +short o-o.myaddr.l.google.com |sed "s/\"//g"'
 alias fuzzy-search='fzf'
 alias duplicate_finder="/usr/bin/ls **/* -1 | tr '[A-Z]' '[a-z]' | sort | uniq -c | grep -v ' 1 '"
 
+# print 146 newer commands in order of more use
+alias cmd-newer='fc -li -146 | awk '{print $4}' | sort | uniq -c'
+
+# Calendary in terminal
+alias calendary='cal'
+
 # Global aliases dropped for using VIM Abreviations "plugin"
 #alias -g ':L'='| color-less'
 #alias -g ':G'='| grep'
@@ -83,7 +89,7 @@ alias rsync-update="rsync -avzu --progress -h"
 alias rsync-synchronize="rsync -avzu --delete --progress -h"
 
 # applications aliases
-alias mutt='mutt -F ~/.config/mutt/muttrc'
+#alias mutt='mutt -F ~/.config/mutt/muttrc'
 alias clima='curl http://wttr.in/SaoPaulo'
 alias docker='sudo docker'
 alias zeroNet='docker run -d -e "ENABLE_TOR=true" -v /tmp/zeroNet:/root/data -p 15441:15441 -p 127.0.0.1:43110:43110 nofish/zeronet'
@@ -109,3 +115,4 @@ alias pacman-force-uninstalled="pacman -D --asdep" # Mark one or more installed 
 
 # other aliases
 alias disks='echo "╓───── m o u n t . p o i n t s"; echo "╙────────────────────────────────────── ─ ─ "; lsblk -a; echo ""; echo "╓───── d i s k . u s a g e"; echo "╙────────────────────────────────────── ─ ─ "; df;' # cool echo df:
+#alias st='st -t "Suckless Terminal NOTO MONO" -f "Noto Mono:style=Semibold:size=10" -g "130x28"'

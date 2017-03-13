@@ -44,10 +44,13 @@ zbell_noise() {
     Command: $zbell_lastcmd completed
     exit status: $zbell_exit_status
     Time: $(pretty_time $zbell_cmd_duration)"
+    
     mpv \
       --no-audio-display \
       --really-quiet \
       $HOME/Downloads/nintendoSwitchSound.mp3 
+
+    echo $message > /tmp/beepop.fifo
 }
 
 zbell_email() {
@@ -78,7 +81,7 @@ EOF
 
 zbell_external_notify() {
     if [[ -e $HOME/bin/telegram_msg.sh ]];then
-        telegram-cli -W -e "send_text Thiagoroshi /tmp/telegram_msg" &
+        telegram-cli -W -e "send_text Thiagoroshi /tmp/telegram_msg"
     else
         zbell_email
     fi

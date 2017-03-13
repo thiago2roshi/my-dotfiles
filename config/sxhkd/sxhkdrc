@@ -6,5 +6,7 @@ super + l
     i3lock.sh
 # Rofi Menu Launcher
 ctrl + space
-    rofi -show run
-
+    rofi -show combi
+# terminal Laucher
+super + Return
+    st

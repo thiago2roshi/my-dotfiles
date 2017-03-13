@@ -1,7 +1,7 @@
 # mv -- interactive rename, using vared
 # http://chneukirchen.org/dotfiles/.zshrc
 #
-mv_i() {
+mvi-vared() {
   local src dst
   for src; do
     [[ -e $src ]] || { print -u2 "$src does not exist"; continue }

@@ -5,30 +5,29 @@
 autoload -U colors        && colors
 autoload -U vcs_info      && vcs_info
 autoload -Uz promptinit   && promptinit
-autoload compinit         && compinit
-autoload bashcompinit     && bashcompinit
 
 # Helper Command
 autoload -Uz run-help
 autoload -Uz run-help-git
 autoload -Uz run-help-svn
 autoload -Uz run-help-svk
-
+autoload compinit     && compinit
+autoload bashcompinit && bashcompinit
 
 zmodload zsh/terminfo
+autoload -U zmv        # zmv a command for renaming files by means of shell patterns
+autoload -U zargs      # zargs as an alternative to find -exec and xargs.
 
 ##
 # Various
 ##
 setopt auto_cd         # if command is a path, cd into it
 setopt extended_glob   # activate complex pattern globbing
-setopt extendedglob    # 
+setopt extendedglob    #
 
 setopt prompt_subst    # Turn on command substitution in the prompt (and parameter expansion and arithmetic expansion).
 setopt correct         # try to correct spelling of commands
 unsetopt beep          # no bell on error
-autoload -U zmv        # zmv a command for renaming files by means of shell patterns
-autoload -U zargs      # zargs as an alternative to find -exec and xargs.
 
 setopt interactivecomments # Ignore lines prefixed with '#'.
 setopt COMPLETE_ALIASES    # completion work with aliases
@@ -51,6 +50,8 @@ for r in $HOME/.dotfiles/zsh/plugins/*.zsh; do
   source $r
 done
 
+# keybind
+source $HOME/.dotfiles/zsh/keybind.zshr
 # theme
 source $HOME/.dotfiles/zsh/2lines_prompt
 
@@ -59,4 +60,3 @@ source $HOME/.dotfiles/zsh/2lines_prompt
 
 # exibe taskWarrior in zsh start
 # task
-
