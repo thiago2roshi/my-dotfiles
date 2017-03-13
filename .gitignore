@@ -1,1 +1,5 @@
+config/mpd
+!config/mpd/mpd,conf
+config/neovim
+!config/neovim/init.vim
 
