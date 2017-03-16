@@ -1,8 +1,22 @@
 # autocompletion system
-autoload -U ~/.dotfiles/zsh/completion/*(:t)
-autoload -U ~/.dotfiles/zsh/gen-completion/*(:t)
-autoload -U ~/.dotfiles/zsh/plugins/zsh-completions/src/*(:t)
-autoload -U /usr/share/bash-completion/bash-completion
+#autoload -U ~/.dotfiles/zsh/completion/*(:t)
+#autoload -U ~/.dotfiles/zsh/gen-completion/*(:t)
+#autoload -U ~/.dotfiles/zsh/plugins/zsh-completions/src/*(:t)
+#autoload -U /usr/share/bash-completion/bash-completion
+
+
+# load completion folder
+fpath+="`dirname $0`/completion"
+fpath+="`dirname $0`/gen-completion"
+fpath+="/usr/share/bash-completion/bash-completion"
+fpath+="`dirname $0`/plugins/zsh-completions/src"   # zsh-completions plugins
+
+# turn autocompletion on
+zmodload zsh/complist
+autoload -Uz compinit
+autoload -Uz bashcompinit
+
+compinit && bashcompinit
 
 # some _compdef 
 # using _gnu_generec for --help of commands if not exist a "_completion" file
