@@ -11,7 +11,7 @@ scrw=$(wattr y `lsw -r`)
 w=150
 h=20
 x=25
-y=$(( scry - $h - 25 ))
+y=$(( $scry - $h - 25 ))
 
 # popup counter (starts at -1 so that the first popup has no offset
 n=-1

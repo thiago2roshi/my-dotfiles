@@ -7,8 +7,8 @@ default_geometry() {
     x=$(wattr w `lsw -r`)
     y=$(wattr h `lsw -r`)
 
-    width=140
-    height=28
+    width=200
+    height=30
 
     offy=44
     offx=$(( x - $width - 25 ))
@@ -18,11 +18,11 @@ default_geometry() {
 
 FIFO=/tmp/beepop.fifo
 GEOM=$(default_geometry)
-SLEEP=3
+SLEEP=5
 CHAR="$(/usr/bin/printf '\uE054')"
 FG='#ffffffff'
 BG='#ffa24455' 
-
+FONT='-monotype-noto mono-medium-r-normal--10-*-*-*-*-*-*-*'
 
 case $(basename $0) in
     beepop)
@@ -34,7 +34,8 @@ case $(basename $0) in
 
                 echo "%{r}$LINE %{F${HL}}$CHAR"
                 sleep $SLEEP
-            ) | lemonbar -d -g "$GEOM" -f "$FONT" -f "$ICON" -B "$BG" -F "$FG"
+            #) | lemonbar -d -g "$GEOM" -f "$FONT" -f "$ICON" -B "$BG" -F "$FG"
+            ) | lemonbar -d -g "$GEOM" -f "$FONT" -B "$BG" -F "$FG"
         done
         ;;
     popup)
