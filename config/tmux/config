@@ -46,8 +46,8 @@ unbind [
 bind Escape copy-mode
 unbind p
 bind p paste-buffer
-bind-key -t vi-copy 'v' begin-selection
-bind -t vi-copy y copy-pipe 'xclip -in -selection clipboard'
+#bind-key -t vi-copy 'v' begin-selection
+#bind -t vi-copy y copy-pipe 'xclip -in -selection clipboard'
 
 # use vi mode
 setw -g mode-keys vi
@@ -69,6 +69,9 @@ bind-key -n S-left prev
 bind-key -n S-right next
 bind-key -n C-left swap-window -t -1
 bind-key -n C-right swap-window -t +1
+# Last window
+bind-key C-a last-window
+
 
 # colon :
 bind : command-prompt
@@ -108,7 +111,7 @@ set -g status-right-length 100
 set -g status-right ''
 set -g status-right '#(~/bin/tmux-status)'
 # Info on left (no session display)
-set -g status-left ''
+set -g status-left '#{?client_prefix,#[reverse]<Prefix>#[noreverse] ,}'
 
 # loud or quiet?
 set-option -g visual-activity on

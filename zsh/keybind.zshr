@@ -1,7 +1,7 @@
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 zmodload zsh/terminfo
-bindkey -e        # Emacs Keybinds
+#bindkey -e        # Emacs Keybinds
 typeset -A key
 
 key[Home]=${terminfo[khome]}
@@ -18,20 +18,19 @@ key[CtrlLeft]='[1;5D'
 key[CtrlRight]='[1;5C'
 
 # setup key accordingly
-[[ -n "${key[Home]}"    ]]  && bindkey  "${key[Home]}"      beginning-of-line
-[[ -n "${key[End]}"     ]]  && bindkey  "${key[End]}"       end-of-line
-[[ -n "${key[Insert]}"  ]]  && bindkey  "${key[Insert]}"    overwrite-mode
-[[ -n "${key[Delete]}"  ]]  && bindkey  "${key[Delete]}"    delete-char
+[[ -n "${key[Home]}"     ]]  && bindkey -- "${key[Home]}"      beginning-of-line
+[[ -n "${key[End]}"      ]]  && bindkey -- "${key[End]}"       end-of-line
+[[ -n "${key[Insert]}"   ]]  && bindkey -- "${key[Insert]}"    overwrite-mode
+[[ -n "${key[Delete]}"   ]]  && bindkey -- "${key[Delete]}"    delete-char
+#[[ -n "${key[Up]}"      ]]  && bindkey -- "${key[Up]}"        up-line-or-history
+#[[ -n "${key[Down]}"    ]]  && bindkey -- "${key[Down]}"      down-line-or-history
+[[ -n "${key[Up]}"       ]]  && bindkey -- "${key[Up]}"        history-substring-search-up
+[[ -n "${key[Down]}"     ]]  && bindkey -- "${key[Down]}"      history-substring-search-down
+[[ -n "${key[Left]}"     ]]  && bindkey -- "${key[Left]}"      backward-char
+[[ -n "${key[Right]}"    ]]  && bindkey -- "${key[Right]}"     forward-char
 
-#[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"        up-line-or-history
-#[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"      down-line-or-history
-[[ -n "${key[Up]}"      ]]  && bindkey  "${key[Up]}"        history-substring-search-up
-[[ -n "${key[Down]}"    ]]  && bindkey  "${key[Down]}"      history-substring-search-down
-[[ -n "${key[Left]}"    ]]  && bindkey  "${key[Left]}"      backward-char
-[[ -n "${key[Right]}"   ]]  && bindkey  "${key[Right]}"     forward-char
-
-[[ -n "${key[CtrlLeft]}" ]] && bindkey  "${key[CtrlLeft]}"  emacs-backward-word
-[[ -n "${key[CtrlRight]}" ]] && bindkey "${key[CtrlRight]}" emacs-forward-word
+[[ -n "${key[CtrlLeft]}"  ]] && bindkey -- "${key[CtrlLeft]}"  emacs-backward-word
+[[ -n "${key[CtrlRight]}" ]] && bindkey -- "${key[CtrlRight]}" emacs-forward-word
 
 # Finally, make sure the terminal is in application mode, when zle is
 # active. Only then are the values from $terminfo valid.

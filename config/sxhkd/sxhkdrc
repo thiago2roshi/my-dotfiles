@@ -6,6 +6,8 @@ alt + Escape
 XF86Audio{Play,Prev,Next,Stop}
     mpc -q {toggle,prev,next,stop}
 # LockScreen i3lock
+ctrl + alt + l
+    i3lock.sh
 super + l
     i3lock.sh
 # Rofi Menu Launcher
@@ -13,25 +15,25 @@ ctrl + space
     rofi -show combi
 # terminal Laucher
 super + Return
-    st
+    st -g "130x28" -f "Noto Mono:size=10" -t "XST - zsh"
 
 ## GUI Facility
 # need refine
 # Movement and Resizing
-super + j
-	wmv 0 10 $(pfw)
-super + k
-	wmv 0 -10 $(pfw)
-super + l
-	wmv 10 0 $(pfw)
-super + h
-	wmv -10 0 $(pfw)
+#super + j
+#	  wmv 0 10 $(pfw)
+#super + k
+#	  wmv 0 -10 $(pfw)
+#super + l
+#	  wmv 10 0 $(pfw)
+#super + h
+#	  wmv -10 0 $(pfw)
 
-alt + shift + l
-	wrs 10 0 $(pfw)
-alt + shift + h
-	wrs -10 0 $(pfw)
-alt + shift + j
-	wrs 0 10 $(pfw)
-alt + shift + k
-wrs 0 -10 $(pfw)
+#alt + shift + l
+#	  wrs 10 0 $(pfw)
+#alt + shift + h
+#	  wrs -10 0 $(pfw)
+#alt + shift + j
+#    wrs 0 10 $(pfw)
+#alt + shift + k
+#    wrs 0 -10 $(pfw)

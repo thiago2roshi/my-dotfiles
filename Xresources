@@ -36,8 +36,9 @@
 !}}} 
 
 !{{{ Simple things
-!#define myfont          Fira Mono for Powerline
-#define myfont          Noto Mono
+#define myfont          Fira Mono for Powerline
+#define myfontx         '-monotype-noto mono-medium-r-normal--*-*-*-*-*-*-*-*'
+!#define myfont          Noto Mono
 #define myfontDouble    Noto Sans Mono CJK JP
 #define myfontsize      10
 #define myfontsizebig   16

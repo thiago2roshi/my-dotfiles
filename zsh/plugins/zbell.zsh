@@ -51,6 +51,7 @@ zbell_noise() {
       $HOME/Downloads/nintendoSwitchSound.mp3 
 
     echo $message > /tmp/beepop.fifo
+    echo $message > /tmp/telegram_msg
 }
 
 zbell_email() {
@@ -69,15 +70,6 @@ Completed with exit status $zbell_exit_status
 EOF
 }
 
-zbell_message() {
-    echo '' > /tmp/telegram_msg
-    cat <<EOF | tee /tmp/telegram_msg
-    ZSH_NOTIFY - ** $HOST **
-    Command ** $zbell_lastcmd completed ** with stats:
-    exit status: $zbell_exit_status
-    Time: $zbell_cmd_duration
-EOF
-}
 
 zbell_external_notify() {
     if [[ -e $HOME/bin/telegram_msg.sh ]];then
@@ -124,7 +116,7 @@ zbell_end() {
 
         if [[ $zbell_cmd_duration -gt $zbell_duration_long ]]; then
             zbell_noise
-            zbell_external_notify
+            #zbell_external_notify
         else
             zbell_noise
         fi

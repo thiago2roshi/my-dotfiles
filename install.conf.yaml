@@ -19,10 +19,11 @@
     ~/.config/mpd:           config/mpd
     ~/.config/terminator:    config/terminator
     ~/.config/mutt:          config/mail/mutt
+    ~/.offlineimaprc:        config/mail/offlineimaprc
+    ~/.config/mail:          config/mail
     ~/.config/redshift.conf: config/redshift.conf
     ~/.config/conky:         config/conky
     ~/.config/rofi:          config/rofi
-    ~/.offlineimaprc:        config/mail/offlineimaprc
     ~/.config/neofetch:      config/neofetch
     ~/.tmux.conf:            config/tmux/config
     ~/.config/sxhkd:         config/sxhkd

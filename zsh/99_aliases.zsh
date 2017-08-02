@@ -90,7 +90,6 @@ alias rsync-synchronize="rsync -avzu --delete --progress -h"
 
 # applications aliases
 #alias mutt='mutt -F ~/.config/mutt/muttrc'
-alias clima='curl http://wttr.in/SaoPaulo'
 alias docker='sudo docker'
 alias zeroNet='docker run -d -e "ENABLE_TOR=true" -v /tmp/zeroNet:/root/data -p 15441:15441 -p 127.0.0.1:43110:43110 nofish/zeronet'
 
@@ -112,6 +111,7 @@ alias pacman-list-package-files="pacman -Ql"       # List all files installed by
 alias pacman-provides-="pacman -Qo"                # Show package(s) owning the specified file(s)
 alias pacman-force-installed="pacman -D --asexp"   # Mark one or more installed packages as explicitly installed
 alias pacman-force-uninstalled="pacman -D --asdep" # Mark one or more installed packages as non explicitly installed
+alias pacman-aur-list="pacman -Qm"                 # list aur/external packages installed
 
 # other aliases
 alias disks='echo "╓───── m o u n t . p o i n t s"; echo "╙────────────────────────────────────── ─ ─ "; lsblk -a; echo ""; echo "╓───── d i s k . u s a g e"; echo "╙────────────────────────────────────── ─ ─ "; df;' # cool echo df:

@@ -88,7 +88,8 @@ bat()
 }
 cpu()
 {
-	CPU_USE=$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}')
+  CPU_USE=$(grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END
+  {print usage}')
 	printf "%.0f" $CPU_USE
 }
 ram()
@@ -108,5 +109,5 @@ front()
 }
 CPU_INFO=`cpu`
 RAM_INFO=`ram`
-echo `front` `bat` `draw $RAM_INFO 4` `temp` `draw $CPU_INFO 7` `clock`
-
+#echo `front` `bat` `draw $RAM_INFO 4` `temp` `draw $CPU_INFO 7` `clock`
+echo `front` `bat` `ram` `temp` `cpu` `clock`
