@@ -35,7 +35,7 @@ case $(basename $0) in
                 echo "%{r}$LINE %{F${HL}}$CHAR"
                 sleep $SLEEP
             #) | lemonbar -d -g "$GEOM" -f "$FONT" -f "$ICON" -B "$BG" -F "$FG"
-            ) | lemonbar -d -g "$GEOM" -f "$FONT" -B "$BG" -F "$FG"
+            ) | lemonbar  -g "$GEOM" -f "$FONT" -f "$CHAR" -B "$BG" -F "$FG"
         done
         ;;
     popup)
