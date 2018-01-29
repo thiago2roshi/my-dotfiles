@@ -1,0 +1,37 @@
+!unixporn/colorcontest 2017 - winner colorScheme
+! special
+#define myfg   #e0f2ec
+#define mybg   #11292e
+#define mycursorColor  #e0f2ec
+
+! black
+#define mycolor0       #0e1f22
+#define mycolor8       #1c4b4e
+
+! red
+#define mycolor1       #a85659
+#define mycolor9       #eb8995
+
+! green
+#define mycolor2       #668e8c
+#define mycolor10      #82aea9
+
+! yellow
+#define mycolor3       #c3b6a4
+#define mycolor11      #e1d9ce
+
+! blue
+#define mycolor4       #326d78
+#define mycolor12      #a7d2cd
+
+! magenta (or orange)
+#define mycolor5       #433c32
+#define mycolor13      #aa9576
+
+! cyan
+#define mycolor6       #386e74
+#define mycolor14      #90c0bd
+
+! white
+#define mycolor7       #e0f2ec
+#define mycolor15 #f0f8f3

@@ -1,7 +1,7 @@
 
 ! hard contrast background #1d2021
 ! soft contrast background #32302f
-#define mybg      #282828
+#define mybg      #1d2021
 #define myfg      #ebdbb2
 #define mycolor0  #282828
 #define mycolor8  #928374

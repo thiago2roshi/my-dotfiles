@@ -1,27 +1,27 @@
-#define mybackground:  #1c181a
-#define myforeground:  #bfba93
-#define mycursorColor: #bfba93
+#define mybg  #1c181a
+#define myfg  #bfba93
+#define mycursorColor #bfba93
 
-#define mycolor0:      #322e33
-#define mycolor8:      #3d4138
+#define mycolor0      #322e33
+#define mycolor8      #3d4138
 
-#define mycolor1:      #6e513b
-#define mycolor9:      #71563e
+#define mycolor1      #6e513b
+#define mycolor9      #71563e
 
-#define mycolor2:      #b79c3d
-#define mycolor10:     #886333
+#define mycolor2      #b79c3d
+#define mycolor10     #886333
 
-#define mycolor3:      #866939
-#define mycolor11:     #ae7043
+#define mycolor3      #866939
+#define mycolor11     #ae7043
 
-#define mycolor4:      #7a6954
-#define mycolor12:     #587387
+#define mycolor4      #7a6954
+#define mycolor12     #587387
 
-#define mycolor5:      #af8341
-#define mycolor13:     #ae768e
+#define mycolor5      #af8341
+#define mycolor13     #ae768e
 
-#define mycolor6:      #879068
-#define mycolor14:     #636b4c
+#define mycolor6      #879068
+#define mycolor14     #636b4c
 
-#define mycolor7:      #c7b796
-#define mycolor15:     #d5cbbb
+#define mycolor7      #c7b796
+#define mycolor15     #d5cbbb
