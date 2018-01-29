@@ -43,4 +43,5 @@ chpwd_functions+='chpwd_update_git_vars'
 
 PROMPT='${USER_LEVEL}┌[%F{white}%n@%M${USER_LEVEL}]─[%F{white}%~${USER_LEVEL}]$(prompt_git_info)
 ${USER_LEVEL}└─ - %F{white}'
+
 RPROMPT='$(date "+%H:%M %a %d/%b")'

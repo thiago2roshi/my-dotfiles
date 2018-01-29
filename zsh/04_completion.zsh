@@ -16,7 +16,22 @@ zmodload zsh/complist
 autoload -Uz compinit
 autoload -Uz bashcompinit
 
-compinit && bashcompinit
+for dump in ~/.zcompdump(N.mh+24); do
+    compinit 
+    bashcompinit
+done
+
+compinit -C
+bashcompinit
+
+#typeset -i updated_at=$(date +'%j' -r ~/.zcompdump 2>/dev/null || stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)
+#if [ $(date +'%j') != $updated_at ]; then
+#    compinit && bashcompinit
+#else
+#    compinit -C && bashcompinit -C
+#fi
+#unset updated_at
+
 
 # some _compdef 
 # using _gnu_generec for --help of commands if not exist a "_completion" file

@@ -3,19 +3,21 @@ if [ -n "$__CURRENT_GIT_BRANCH" ]; then
     s+="$__CURRENT_GIT_BRANCH"
     case "$__CURRENT_GIT_BRANCH_STATUS" in
         ahead)
-        s+="↑"
+        s+="${md_arrow_upward:-default ↑} "
         ;;
         diverged)
-        s+="↕"
+        s+="${oct_git_compare:-default ↕} "
         ;;
         behind)
-        s+="↓"
+        s+="${md_arrow_downward:-default ↓} "
         ;;
     esac
     if [ -n "$__CURRENT_GIT_BRANCH_IS_DIRTY" ]; then
-        s+="⚡"
+        s+="${fa_bolt} "
     fi
-    s+="${USER_LEVEL}]"
+    s+=" ${USER_LEVEL}]"
  
-    printf "%s%s" $s
+    #printf "%s%s" $s
+
+    print $s   ## workaround 'icons-in-terminal'
 fi

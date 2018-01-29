@@ -6,13 +6,16 @@
 export BIN_HOME="$HOME/bin"
 export PAGER=${PAGER:-less}
 export DEFAULT_USER="thiago"
-export EDITOR='nvim'
+export EDITOR='vim'
 export VISUAL='vim'
+export SUDO_EDITOR=vim
 
 # exportando path
 export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/:/usr/local/games:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
 
+# icons-in-terminal completion
+source "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"
 
 #  Less need some color to?
 # export LESS_TERMCAP_mb=$'\E[01;31m'
