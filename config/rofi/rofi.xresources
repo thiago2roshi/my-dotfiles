@@ -31,6 +31,8 @@ rofi.pid:              /run/user/1000/rofi.pid
 rofi.disable-history:  false
 ! Case-sensitivity
 rofi.case-sensitivity: false
+! Enable Icons
+rofi.show-icon:        true
 
 ! Enabled modi
 rofi.modi: ssh,run,fileBrowser:~/.dotfiles/config/rofi/rofi-file-brownser.sh,passmenu:~/.dotfiles/config/rofi/passmenu.sh
