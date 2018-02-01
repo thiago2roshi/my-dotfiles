@@ -5,17 +5,19 @@ alt + Escape
 # MPD player
 XF86Audio{Play,Prev,Next,Stop}
     mpc -q {toggle,prev,next,stop}
-# LockScreen i3lock
+# LockScreen i3lock -- xflock4 integrate "i3lock.sh"
 ctrl + alt + l
-    i3lock.sh
+    ~/bin/betterlockscreen -l
+    #xflock4
 super + l
-    i3lock.sh
+    ~/bin/betterlockscreen -l
+    #xflock4
 # Rofi Menu Launcher
 ctrl + space
     rofi -show combi
 # terminal Laucher
 super + Return
-    st -g "130x28" -f "Noto Mono:size=10" -t "XST - zsh"
+    st -g "130x28" -f "Hack:size=10" -t "XST - zsh" -e tmux
 
 ## GUI Facility
 # need refine
