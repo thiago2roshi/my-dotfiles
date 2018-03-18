@@ -1,10 +1,12 @@
 ## Essencials
-# Reload SXHK
-alt + Escape
-    pkill -USR1 -x sxhkd
+# Reload sxhkd
+#alt + Escape
+#    pkill -USR1 -x sxhkd
 # MPD player
 XF86Audio{Play,Prev,Next,Stop}
     mpc -q {toggle,prev,next,stop}
+
+## UI
 # LockScreen i3lock -- xflock4 integrate "i3lock.sh"
 ctrl + alt + l
     ~/bin/betterlockscreen -l
@@ -12,12 +14,18 @@ ctrl + alt + l
 super + l
     ~/bin/betterlockscreen -l
     #xflock4
-# Rofi Menu Launcher
-ctrl + space
-    rofi -show combi
+
+## Launcher
 # terminal Laucher
 super + Return
     st -g "130x28" -f "Hack:size=10" -t "XST - zsh" -e tmux
+
+# Rofi Window
+super + d
+    rofi -show window
+# Rofi Menu Launcher
+ctrl + space
+    rofi -show combi
 
 ## GUI Facility
 # need refine
