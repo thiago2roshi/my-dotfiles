@@ -10,6 +10,13 @@ export EDITOR='vim'
 export VISUAL='vim'
 export SUDO_EDITOR=vim
 
+# PASS-TOMB
+export PASSWORD_STORE_TOMB="/usr/local/bin/tomb"
+export PASSWORD_STORE_TOMB_FILE="$HOME/.pass/pass.tomb"
+export PASSWORD_STORE_TOMB_KEY="$HOME/.pass/pass.key.tomb"
+export PASSWORD_STORE_TOMB_SIZE="20" # size in MB
+
+
 # exportando path
 export PATH="$HOME/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games/:/usr/local/games:$PATH"
 export MANPATH="/usr/local/man:$MANPATH"
