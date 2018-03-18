@@ -17,7 +17,6 @@
     ~/.config/Xresources.d:  config/Xresources.d
     ~/.config/nvim:          config/neovim
     ~/.config/mpd:           config/mpd
-    ~/.config/terminator:    config/terminator
     ~/.config/mutt:          config/mail/mutt
     ~/.offlineimaprc:        config/mail/offlineimaprc
     ~/.config/mail:          config/mail
@@ -27,4 +26,5 @@
     ~/.config/neofetch:      config/neofetch
     ~/.tmux.conf:            config/tmux/config
     ~/.config/sxhkd:         config/sxhkd
+    ~/.vim:                  config/vim
     /usr/lib/python3.5/site-packages/pygments/styles/sourcerer.py: config/pygments/sourcerer.py
