@@ -13,3 +13,39 @@
 [submodule "zsh/plugins/tipz"]
 	path = zsh/plugins/tipz
 	url = https://github.com/molovo/tipz
+[submodule "config/vim/pack/thiagoroshi/opt/NerdTree"]
+	path = config/vim/pack/thiagoroshi/opt/NerdTree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "config/vim/pack/thiagoroshi/opt/syntastic"]
+	path = config/vim/pack/thiagoroshi/opt/syntastic
+	url = https://github.com/scrooloose/syntastic
+[submodule "config/vim/pack/thiagoroshi/opt/rainbow"]
+	path = config/vim/pack/thiagoroshi/opt/rainbow
+	url = https://github.com/luochen1990/rainbow
+[submodule "config/vim/pack/thiagoroshi/opt/vim-css-color"]
+	path = config/vim/pack/thiagoroshi/opt/vim-css-color
+	url = https://github.com/ap/vim-css-color
+[submodule "config/vim/pack/thiagoroshi/opt/vimtex"]
+	path = config/vim/pack/thiagoroshi/opt/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule "config/vim/pack/thiagoroshi/opt/quicktex"]
+	path = config/vim/pack/thiagoroshi/opt/quicktex
+	url = https://github.com/brennier/quicktex
+[submodule "config/vim/pack/thiagoroshi/start/vim-gitgutter"]
+	path = config/vim/pack/thiagoroshi/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "config/vim/pack/thiagoroshi/start/ctrlp.vim"]
+	path = config/vim/pack/thiagoroshi/start/ctrlp.vim
+    url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "config/vim/pack/thiagoroshi/start/nerdtree-git"]
+	path = config/vim/pack/thiagoroshi/start/nerdtree-git
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule "config/vim/pack/thiagoroshi/start/vim-fugitive"]
+	path = config/vim/pack/thiagoroshi/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "config/vim/pack/thiagoroshi/start/tabular"]
+	path = config/vim/pack/thiagoroshi/start/tabular
+	url = https://github.com/godlygeek/tabular
+[submodule "config/vim/pack/thiagoroshi/start/nerdcommenter"]
+	path = config/vim/pack/thiagoroshi/start/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter
