@@ -12,7 +12,7 @@ alias sec-av-update="sudo freshclam"
 # using space in command for ignoring in history
 alias ls=' ls --tabsize=0 --literal --color=auto --show-control-chars --classify --human-readable --group-directories-first -X'
 alias la='ls -A'
-alias l='ls -C'
+alias l='\ls -C'
 alias ll='ls -alh'
 
 # Colorize Everything
@@ -24,15 +24,17 @@ alias egrep='egrep --color=auto'
 alias less='less -r'
 alias more='less'
 alias free='free -m'                          # size in MB
+alias man='man -a'                            # display all manpages
+alias mv='mv -iv'
 alias cp="cp -i"                              # confirm before overwriting something
-alias mv='timeout 8 mv -iv'                   # limit potencial damage
-alias rm='timeout 3 rm -Iv --one-file-system' # limit potencial damage too
+alias rm='echo "use rmi for no timeout cmd";noglob timeout 3 rm -Iv --one-file-system' # limit potencial damage
+alias rmi='noglob \rm -Iv --one-file-system'  # securiry reasons
 alias df='df -h'                              # human readable
 alias du='du -h'                              # human readable to
 alias cls='clear'
 alias mkdir='mkdir -p -v'
 alias dmesg='dmesg --color=always'
-
+alias feh='\feh -q -N -x --scale-down'        # quiet, borderless, no-menus, montage mode
 # utils commands
 alias reload-zsh='source ~/.zshrc ; clear'
 alias help=run-help                           # active helper in zsh
@@ -44,7 +46,6 @@ alias myip='dig TXT +short o-o.myaddr.l.google.com |sed "s/\"//g"'
 alias fuzzy-search='fzf'
 alias duplicate_finder="/usr/bin/ls **/* -1 | tr '[A-Z]' '[a-z]' | sort | uniq -c | grep -v ' 1 '"
 alias explorer='ranger'
-alias file-explorer='ranger'
 
 # print 146 newer commands in order of more use
 alias cmd-newer='fc -li -146 | awk '{print $4}' | sort | uniq -c'
