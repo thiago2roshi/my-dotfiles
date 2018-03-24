@@ -1,8 +1,7 @@
 !{{{ ColorScheme
-!#include ".config/Xresources.d/gruvbox.color"
-
 !urnn test scheme
-#include ".config/Xresources.d/mother3.color"
+!#include ".config/Xresources.d/hex.color"
+#include ".config/Xresources.d/palendrome.color"
 
 !==== Colors
 ! special
@@ -51,7 +50,7 @@
 #include ".config/Xresources.d/xterm.xresources"
 
 ! Rofi
-#include ".config/rofi/rofi.xresources"
+!#include ".config/rofi/rofi.xresources"
 
 ! Xst - simple terminal
 #include ".config/Xresources.d/xst.xresources"
