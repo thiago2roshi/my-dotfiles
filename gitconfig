@@ -5,6 +5,7 @@
 [push]
 	default = simple
 [core]
-  pager = less -r
+    pager = less -r
+    diff = vimdiff
 [color]
   ui = true

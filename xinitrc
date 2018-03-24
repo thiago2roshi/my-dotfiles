@@ -21,3 +21,5 @@ thunar --daemon &
 mpd ~/.config/mpd/mpd.conf &
 (sleep 2s && mpd play) &
 
+# better lockscreen symlink
+slock&
