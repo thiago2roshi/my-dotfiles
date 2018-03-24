@@ -45,7 +45,6 @@ alias decoder_effect='$1 | nms -a'
 alias myip='dig TXT +short o-o.myaddr.l.google.com |sed "s/\"//g"'
 alias fuzzy-search='fzf'
 alias duplicate_finder="/usr/bin/ls **/* -1 | tr '[A-Z]' '[a-z]' | sort | uniq -c | grep -v ' 1 '"
-alias explorer='ranger'
 
 # print 146 newer commands in order of more use
 alias cmd-newer='fc -li -146 | awk '{print $4}' | sort | uniq -c'
