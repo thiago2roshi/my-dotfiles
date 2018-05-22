@@ -1,9 +1,12 @@
+/* vim: set ft=XDEFAULTS : */
 !unixporn/colorcontest 2017 - winner colorScheme
+!modification for VIm
+
 #define myfg   #dcdcdc
 #define mybg   #2f3243
 #define mycursorColor  #dcdcdc
 ! black
-#define mycolor0       #292b3a
+#define mycolor0       #5b5b81
 #define mycolor8       #9a9adb
 ! red
 #define mycolor1       #f58484

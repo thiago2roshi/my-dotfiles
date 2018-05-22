@@ -1,18 +1,4 @@
-#  ██████████ ████     ████ ██     ██ ██     ██
-# ░░░░░██░░░ ░██░██   ██░██░██    ░██░░██   ██
-#     ░██    ░██░░██ ██ ░██░██    ░██ ░░██ ██
-#     ░██    ░██ ░░███  ░██░██    ░██  ░░███
-#     ░██    ░██  ░░█   ░██░██    ░██   ██░██
-#     ░██    ░██   ░    ░██░██    ░██  ██ ░░██
-#     ░██    ░██        ░██░░███████  ██   ░░██
-#     ░░     ░░         ░░  ░░░░░░░  ░░     ░░
-#
-#  ▓▓▓▓▓▓▓▓▓▓
-# ░▓ author ▓ xero <x@xero.nu>
-# ░▓ code   ▓ http://code.xero.nu/dotfiles
-# ░▓ mirror ▓ http://git.io/.files
-# ░▓▓▓▓▓▓▓▓▓▓
-# ░░░░░░░░░░
+# author: xero <x@xero.nu>
 
 # change prefix to Ctrl-a (like in gnu-screen)
 unbind C-b
@@ -33,7 +19,7 @@ set -g pane-base-index 1
 set -g default-terminal "screen-256color"
 
 # source config file
-bind r source-file ~/.tmux.conf
+bind r source-file ~/.tmux.conf \; display-message 'Reload Tmux conf'
 
 # history
 set -g history-limit 4096
@@ -54,8 +40,7 @@ setw -g mode-keys vi
 set -g status-keys vi
 
 # pleb mode
-#set -g mouse-utf8 on
-#set -g mouse on
+set -g mouse on
 
 # splitting
 unbind %
@@ -78,15 +63,15 @@ bind : command-prompt
 
 # panes
 set -g pane-border-fg colour0
-set -g pane-active-border-fg colour0
-#set -g pane-active-border-attr blink
+set -g pane-active-border-fg colour88
+set -g pane-active-border-style blink
 
 # status line
 #set -g status-utf8 on
 set -g status-justify left
 set -g status-bg colour0
 set -g status-fg colour66
-set -g status-interval 2
+set -g status-interval 60
 
 # messaging
 set -g message-fg colour0
@@ -109,7 +94,7 @@ setw -g window-status-current-format "#[bg=colour66,fg=colour0,noreverse]█▓�
 # Info on right
 set -g status-right-length 100
 set -g status-right ''
-set -g status-right '#(~/bin/tmux-status)'
+set -g status-right '#(~/.dotfiles/config/tmux/tmux-status)'
 # Info on left (no session display)
 set -g status-left '#{?client_prefix,#[reverse]<Prefix>#[noreverse] ,}'
 
@@ -117,7 +102,7 @@ set -g status-left '#{?client_prefix,#[reverse]<Prefix>#[noreverse] ,}'
 set-option -g visual-activity on
 set-option -g visual-bell off
 set-option -g visual-silence off
-set-window-option -g monitor-activity off
+set-window-option -g monitor-activity on
 set-option -g bell-action none
 
 # tmux clock

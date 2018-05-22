@@ -1,6 +1,6 @@
 !{{{ ColorScheme
 !urnn test scheme
-!#include ".config/Xresources.d/hex.color"
+!#include ".config/Xresources.d/mother3.color"
 #include ".config/Xresources.d/palendrome.color"
 
 !==== Colors
@@ -53,6 +53,7 @@
 !#include ".config/rofi/rofi.xresources"
 
 ! Xst - simple terminal
-#include ".config/Xresources.d/xst.xresources"
+!#include ".config/Xresources.d/xst.xresources"
+#include ".config/Xresources.d/st.xresources"
 !}}}
 

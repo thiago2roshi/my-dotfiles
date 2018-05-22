@@ -1,6 +1,6 @@
 configuration {
-	modi: "window,ssh,run";
-	combi-modi: "drun,run";
+	modi: "window,ssh";
+	combi-modi: "drun";
 	width: 600;
 	font: "Fira Mono for Powerline 16";
 	bw: 0;
@@ -27,6 +27,6 @@ configuration {
 	color-active: "#2f3243, #a3d6f7, #dcdcdc, #a3d6f7, #dcdcdc";
 	color-window: "#2f3243, #dcdcdc, #dcdcdc";*/
 	pid: "/run/user/1000/rofi.pid";
-	display-window: "Janelas: ";
-	display-combi: "Iniciar: " ;
+	display-window: "Janelas";
+	display-combi: "Iniciar" ;
 }

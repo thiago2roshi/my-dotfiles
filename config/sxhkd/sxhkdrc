@@ -18,7 +18,7 @@ super + l
 ## Launcher
 # terminal Laucher
 super + Return
-    st -g "130x28" -f "Hack:size=10" -t "XST - zsh" -e tmux
+    st -g "130x28" -f "Fira Mono for Powerline:size=10:antialias=true:autohint=true" -e tmux
 
 # Rofi Window
 super + d

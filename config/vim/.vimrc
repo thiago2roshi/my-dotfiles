@@ -9,7 +9,7 @@ cab W w | cab Q q | cab Wq wq | cab WQ wq
 
 set encoding=utf8
 set fileencoding=utf8           " file write encode
-set t_Co=256                    " This is may or may not needed.
+set t_Co=16                    " This is may or may not needed.
 set background=dark             " dark-mode
 
 set autochdir                   " Auto change dir to file directory
@@ -42,7 +42,7 @@ endif
 syntax on
 if has("autocmd")
     filetype plugin on
-    filetype plugin indent on
+    filetype indent plugin on
     filetype indent on
 endif
 
@@ -72,7 +72,7 @@ endif
 
 " #### ViM Ui {{{{
 
-colorscheme monokai
+colorscheme shblah
 set title                       " Title Bar
 set tabpagemax=15               " Only show 15 tabs
 set showmode                    " Display mode
