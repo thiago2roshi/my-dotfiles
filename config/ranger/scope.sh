@@ -61,7 +61,7 @@ if [ "$preview_images" = "True" ]; then
         video/*)
             #ffmpegthumbnailer -i "$path" -o "$cached" -s 0 && exit 6 || exit 1;;
             # thanks @MitchWeaver
-            ffmpeg -loglevel panic -y -i "$path" -r 0.0033 -vf scale=-1:240 -vcodec png "$cached" ; exit 6;;
+            #ffmpeg -loglevel panic -y -i "$path" -r 0.0033 -vf scale=-1:240 -vcodec png "$cached" && exit 6 || exit 1;;
     esac
 fi
 
