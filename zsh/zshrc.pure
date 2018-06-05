@@ -2,6 +2,9 @@
 # @author @ThiagoRoshi
 # @gretting 'the internet'
 
+# 'speedtest/diagnostic' zsh
+#zmodload zsh/zprof
+
 autoload -U colors        && colors
 autoload -U vcs_info      && vcs_info
 # Helper Command
@@ -52,3 +55,7 @@ source $HOME/.dotfiles/zsh/2lines_prompt
 #        tmux attach -d -t workspace || tmux new -s workspace 'vim -c ":q"; zsh'; exit
 #    fi
 #fi
+
+# diagnostic run
+#zprof
+

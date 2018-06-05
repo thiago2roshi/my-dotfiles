@@ -1,6 +1,6 @@
 #!/bin/bash
 about () {
-  echo "explain any bash command via mankier.com manpage API
+  printf "explain any bash command via mankier.com manpage API
   example $ explain 'cmd -o | ...' # one quoted command to explain it."
 }
 run () {
@@ -8,7 +8,7 @@ run () {
     while read  -p "Command: " cmd; do
       curl -Gs "https://www.mankier.com/api/explain/?cols="$(tput cols)"&q=$cmd"
     done
-    echo "Bye!"
+    printf "Bye!"
   else
     curl -Gs "https://www.mankier.com/api/explain/?cols="$(tput cols)"&q=$1"
   fi

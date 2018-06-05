@@ -1,17 +1,29 @@
 #!/bin/bash
 
+Download()
+{
+    youtube-dl --ignore-errors \
+        --no-post-overwrites \
+        --format "bestaudio[acodec=opus]" \
+        --extract-audio \
+        --audio-format opus \
+        --add-metadata \
+        --output "%(title)s - %(uploader)s.%(ext)s" \
+        $@
+
+}
 Principal()
 {
-    echo '====================================='
-    echo '| Download apenas o audio (musicas) |'
-    echo '====================================='
-    echo
+    local url
     echo -n "entre com a url do youtube: "
-    read ytUrl
-    if [[ $ytUrl != "" ]]; then
-        youtube-dl --ignore-errors --extract-audio --audio-quality 3 --audio-format vorbis \
-                   --output "%(title)s - %(uploader)s [%(format)s].%(ext)s" \
-                   $ytUrl
+    read Url
+    if [[ $url != "" ]]; then
+        download $url
     fi
 }
-Principal
+
+if [[ $# -ge 1 ]]; then
+    Download $@
+else
+    Principal 
+fi
