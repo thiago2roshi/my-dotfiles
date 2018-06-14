@@ -1,0 +1,4 @@
+#!/bin/bash
+/home/thiago/bin/betterlockscreen -l &
+sleep 6s
+xset dpms force off

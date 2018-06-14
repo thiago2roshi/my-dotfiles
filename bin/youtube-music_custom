@@ -1,0 +1,29 @@
+#!/bin/bash
+
+Download()
+{
+    youtube-dl --ignore-errors \
+        --no-post-overwrites \
+        --format "bestaudio[acodec=opus]" \
+        --extract-audio \
+        --audio-format opus \
+        --add-metadata \
+        --output "%(title)s - %(uploader)s.%(ext)s" \
+        $@
+
+}
+Principal()
+{
+    local url
+    echo -n "entre com a url do youtube: "
+    read Url
+    if [[ $url != "" ]]; then
+        download $url
+    fi
+}
+
+if [[ $# -ge 1 ]]; then
+    Download $@
+else
+    Principal 
+fi

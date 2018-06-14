@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# fifo that we'll use to feed the popups
+test -p /tmp/popup.fifo || mkfifo /tmp/popup.fifo
+
+# popups geometry
+w=150
+h=20
+x=1000
+y=40
+
+# popup counter
+n=-1
+
+# get messages from the fifo. You will then need to write text to that fifo
+# instead of firing `popup`
+tail -f /tmp/popup.fifo |
+    while ifs= read -r message; do
+        # increment the counter
+        n=$((n + 1))
+
+        {
+            # display the popup under the others
+            (echo "%{c}${message}" ; sleep 3s) | lemonbar -d \
+                -g ${w}x${h}+${x}+$((y + h *n)) -B "#ff313131" -F "#ffe1e1e1"
+
+        } &
+            # decrement the counter
+            n=$((n - 1))
+    done
