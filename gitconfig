@@ -18,4 +18,5 @@
     d = diff
     dw = 'diff --word-diff'
     unstage = 'reset HEAD --'
-    hist = log --graph --date=short --color --pretty=format:\"%h %ad | %s%d [%an]\"
+	hist = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+	logc = log --stat --abbrev-commit
