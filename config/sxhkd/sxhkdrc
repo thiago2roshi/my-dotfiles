@@ -9,11 +9,11 @@ XF86Audio{Play,Prev,Next,Stop}
 ## UI
 # LockScreen i3lock -- xflock4 integrate "i3lock.sh"
 ctrl + alt + l
-    ~/bin/betterlockscreen -l
-    #xflock4
+    #~/bin/betterlockscreen -l
+    xflock4
 super + l
-    ~/bin/betterlockscreen -l
-    #xflock4
+    #~/bin/betterlockscreen -l
+    xflock4
 
 ## Launcher
 # terminal Laucher
