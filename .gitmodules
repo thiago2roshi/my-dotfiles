@@ -49,3 +49,6 @@
 [submodule "config/vim/pack/thiagoroshi/start/nerdcommenter"]
 	path = config/vim/pack/thiagoroshi/start/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter
+[submodule "config/vim/pack/thiagoroshi/start/cheat.sh-vim"]
+	path = config/vim/pack/thiagoroshi/start/cheat.sh-vim
+	url = git@github.com:dbeniamine/cheat.sh-vim.git
