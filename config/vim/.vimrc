@@ -4,6 +4,7 @@
 " ##### ViM configs {{{
 set nocompatible                " ViM remove 'compatibility' with VI
 
+set nospell spelllang=pt,en        " added spellchecking: Thanks @fabio from https://www.vivaolinux.com.br/
 " Fix common typos
 cab W w | cab Q q | cab Wq wq | cab WQ wq
 

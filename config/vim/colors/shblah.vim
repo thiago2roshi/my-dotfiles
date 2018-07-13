@@ -51,6 +51,8 @@ highlight Underlined   term=underline cterm=underline ctermfg=NONE   ctermbg=NON
 highlight VertSplit    term=NONE cterm=bold ctermfg=15    ctermbg=NONE
 highlight Visual       term=NONE cterm=NONE ctermfg=0    ctermbg=7
 highlight WarningMsg   term=NONE cterm=bold ctermfg=3    ctermbg=NONE
+highlight SpellCap     term=underline cterm=underline ctermfg=White ctermbg=Blue
+highlight SpellBad     term=underline cterm=bold ctermfg=Black ctermbg=Red
 
 " General highlighting group links.
 highlight! link diffAdded       DiffAdd
