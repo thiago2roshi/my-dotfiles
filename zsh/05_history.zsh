@@ -14,10 +14,12 @@ export HISTIGNORE="ls::pwd:exit:date:* --help"
 
 setopt \
     append_history       \
-    hist_ignore_all_dups \
-    hist_ignore_space    \
     inc_append_history   \
+    hist_ignore_all_dups \
+    hist_reduce_blanks   \
+    hist_save_no_dups    \
+    hist_ignore_space    \
     hist_verify          \
-    EXTENDED_HISTORY     \
-    SHARE_HISTORY        
+    extended_history     \
+    share_history
 

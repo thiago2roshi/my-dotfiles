@@ -72,23 +72,10 @@ alias -s html="w3m"
 alias -s txt='vim'
 alias -s md='mdless'
 
-# git needs aliases?
-alias ga='git add'
-alias gst='git status'
-alias gc='git commit -v'
-#alias gp='git push'
-#alias gl='git pull'
-#alias gr='git remote'
-#alias gra='git remote add'
-#alias gd='git diff'
-#alias gdw='git diff --word-diff'
-#alias ghist='git log --graph --full-history --all --color --pretty=tformat:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s%x20%x1b[33m(%an)%x1b[0m"'
-
 # gsync aliases
 alias rsync-copy="rsync -avz --progress -h"
 alias rsync-move="rsync -avz --progress -h --remove-source-files"
 alias rsync-update="rsync -avzu --progress -h"
-alias rsync-synchronize="rsync -avzu --delete --progress -h"
 
 # applications aliases
 #alias mutt='mutt -F ~/.config/mutt/muttrc'
@@ -117,4 +104,5 @@ alias pacman-aur-list="pacman -Qm"                 # list aur/external packages 
 
 # other aliases
 alias disks='echo "╓───── m o u n t . p o i n t s"; echo "╙────────────────────────────────────── ─ ─ "; lsblk -a; echo ""; echo "╓───── d i s k . u s a g e"; echo "╙────────────────────────────────────── ─ ─ "; df;' # cool echo df:
-#alias st='st -t "Suckless Terminal NOTO MONO" -f "Noto Mono:style=Semibold:size=10" -g "130x28"'
+alias fuck='sudo'
+alias please='sudo !!'
