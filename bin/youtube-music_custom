@@ -4,7 +4,7 @@ Download()
 {
     youtube-dl --ignore-errors \
         --no-post-overwrites \
-        --format "bestaudio[acodec=opus]" \
+        --format "bestaudio[ext=opus]/bestaudio[ext=vorbis]/bestaudio" \
         --extract-audio \
         --audio-format opus \
         --add-metadata \

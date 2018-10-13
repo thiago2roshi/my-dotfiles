@@ -31,3 +31,6 @@ sleep 2s && mpd play
 
 # wpa_cli notification
 wpa_cli -a ~/bin/wpa_notify.sh
+
+# cool bar
+#[[ -z $(which xob) ]] && python ~/src/dependencias/pulse-volume-watcher.py | xob

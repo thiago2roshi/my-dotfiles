@@ -1,0 +1,5 @@
+#!/bin/sh
+how_in() {
+  where="$1";
+  shift IFS=+ curl "https://cht.sh/$where/ $*"
+}
