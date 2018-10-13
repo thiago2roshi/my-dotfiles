@@ -1,12 +1,18 @@
 [user]
 	email = ads.thiagosouza@gmail.com
-	name = thiago2roshi
+	name = thiagoroshi
 	signingkey = 0x34F94FE841C91F48
+[pull]
+    rebase = true
 [push]
-	default = simple
+    default = simple
+    followTags = true
 [core]
+    editor = vim
     pager = less -r
     diff = vimdiff
+#    excludesfile = ~/.config/git/ignore
+#    attributesfile = ~/.config/git/attributes
 [color]
     ui = true
 [commit]
@@ -18,5 +24,14 @@
     d = diff
     dw = 'diff --word-diff'
     unstage = 'reset HEAD --'
-	hist = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
-	logc = log --stat --abbrev-commit
+    hist = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+    logc = log --stat --abbrev-commit
+    undo = reset --soft HEAD^
+    ci-ammend = commit --ammend
+    contributors = shortlog -sn
+    # how long repo
+    code-stats = !git ls-files |xargs wc -l
+    # ignore file
+    ignore = !([ ! -e .gitignore ] &&>.gitignore) | print `\n$2` >>.gitignore
+    # only for a miss tipping
+    git = !git
