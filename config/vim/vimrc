@@ -6,7 +6,7 @@ set nocompatible                " ViM remove 'compatibility' with VI
 
 set nospell spelllang=pt,en        " added spellchecking: Thanks @fabio from https://www.vivaolinux.com.br/
 " Fix common typos
-cab W w | cab Q q | cab Wq wq | cab WQ wq
+cab W w | cab Q q | cab Wq wq | cab WQ wq | cab X x
 
 set encoding=utf8
 set fileencoding=utf8           " file write encode
@@ -33,11 +33,14 @@ if has ('win32')
 else
     set backup
     set swapfile
-    set undofile                                " Persistent Undo
-    silent execute '!mkdir -p $HOME/.cache/vim/backup'
-    set backupdir=$HOME/.cache/vim/backup//     "backup store folder
-    silent execute '!mkdir -p $HOME/.cache/vim/undo'
-    set undodir=$HOME/.cache/vim/undo//           "undo folder
+    set undofile                                        " Persistent Undo
+    set backupdir=$XDG_CACHE_HOME/vim/backup,~/,/tmp    " backup store folder
+    set undodir=$XDG_CACHE_HOME/vim/undo,/tmp           " undo folder
+    set directory=$XDG_CACHE_HOME/vim/swap,~/,/tmp      " swapdir
+    set viminfo+='1000,n$XDG_CACHE_HOME/vim/viminfo'
+    set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+    set packpath+=$XDG_CONFIG_HOME/vim
+    let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
 endif
 
 syntax on
@@ -142,8 +145,8 @@ set wildignore+=*.tar.*
 
 " ##### formatting {{{
 set nowrap              " no break/wrap long lines 
-set smartindent         " adjust indent in new lines
 set autoindent          " Auto indent
+set smartindent         " adjust indent in new lines
 
 set smarttab            " make tab insert indedents instead of tabs at beginning fo a line
 set expandtab           " tabs is spaces, no tabs
