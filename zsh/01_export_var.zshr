@@ -1,0 +1,56 @@
+##
+# Personal Customizations
+# @thiagoroshi
+##
+# set PATH so it includes user's private bin if it exists
+if [[ $UID -ge 1000 && -d "$HOME/bin" && -z $(echo $PATH | grep -o $HOME/bin)  ]] ; then
+    export PATH="${PATH}:${HOME}/bin"
+fi
+
+# enable local charset
+export LC_CTYPE=pt_BR.UTF-8
+
+# icons-in-terminal completion
+source "${HOME}/.local/share/icons-in-terminal/icons_bash.sh"
+
+#  Less need some color to?
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
+# Zplugins
+TIPZ_TEXT='alias: '
+
+# LS_COLORS
+source "${HOME}/.dotfiles/bash/LS_COLORS"
+
+# XDG variables
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export BIN_HOME="$HOME/bin"
+
+# Respect XDG config
+export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+
+# Anothers Variables
+export MANPATH="/usr/local/man:$MANPATH"
+export PAGER=${PAGER:-less}
+export DEFAULT_USER="thiago"
+export EDITOR='vim'
+export VISUAL='vim'
+export SUDO_EDITOR='vim'
+
+# PASS-TOMB
+export PASSWORD_STORE_TOMB="/usr/local/bin/tomb"
+export PASSWORD_STORE_TOMB_FILE="$HOME/.pass/pass.tomb"
+export PASSWORD_STORE_TOMB_KEY="$HOME/.pass/pass.key.tomb"
+export PASSWORD_STORE_TOMB_SIZE="20" # size in MB
+
