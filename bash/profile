@@ -18,11 +18,35 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
+    PATH="${PATH}:${HOME}/bin"
 fi
 # set 256 colora
 if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-        export TERM='xterm-256color'
+    export TERM='xterm-256color'
 else
-        export TERM='xterm-color'
+    export TERM='xterm-color'
 fi
+
+# XDG variables
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export BIN_HOME="$HOME/bin"
+
+# VIM respect XDG config
+export VIMINIT=":source $XDG_CONFIG_HOME"/vim/vimrc
+
+# Anothers Variables
+export MANPATH="/usr/local/man:$MANPATH"
+export PAGER=${PAGER:-less}
+export DEFAULT_USER="thiago"
+export EDITOR='vim'
+export VISUAL='vim'
+export SUDO_EDITOR='vim'
+
+# PASS-TOMB
+export PASSWORD_STORE_TOMB="/usr/local/bin/tomb"
+export PASSWORD_STORE_TOMB_FILE="$HOME/.pass/pass.tomb"
+export PASSWORD_STORE_TOMB_KEY="$HOME/.pass/pass.key.tomb"
+export PASSWORD_STORE_TOMB_SIZE="20" # size in MB
+
