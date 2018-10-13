@@ -9,13 +9,14 @@
     ~/.bashrc:      bash/bashrc_manjaro
     ~/.bash_logout: bash/bash_logout
     ~/.zshrc:       zsh/zshrc.pure
-    ~/.gitconfig:   gitconfig
+    ~/.zshenv:      zsh/01_export_var.zshr
     ~/.Xresources:  Xresources
     ~/.xinitrc:     xinitrc
     
-    ~/bin:                   scripts
+    ~/bin:                   bin 
+    ~/.config/vim:           config/vim
+    ~/.config/git/config:    gitconfig
     ~/.config/Xresources.d:  config/Xresources.d
-    ~/.config/nvim:          config/neovim
     ~/.config/mpd:           config/mpd
     ~/.config/mutt:          config/mail/mutt
     ~/.offlineimaprc:        config/mail/offlineimaprc
@@ -26,5 +27,4 @@
     ~/.config/neofetch:      config/neofetch
     ~/.tmux.conf:            config/tmux/config
     ~/.config/sxhkd:         config/sxhkd
-    ~/.vim:                  config/vim
     /usr/lib/python3.5/site-packages/pygments/styles/sourcerer.py: config/pygments/sourcerer.py
